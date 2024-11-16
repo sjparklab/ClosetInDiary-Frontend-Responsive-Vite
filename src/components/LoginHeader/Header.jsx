@@ -4,8 +4,8 @@ import classNames from "classnames";
 
 const Header = ({ className }) => {
   return (
-    <div className={classNames(styles.Header, className)}>
-      <div className={styles.logo} />
+    <div className={classNames(styles.header, className)}>
+      <div className={styles.logo}><img src="/logo.svg"></img></div>
     </div>
   );
 };

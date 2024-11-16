@@ -1,0 +1,138 @@
+.container {
+  display: grid;
+  grid-template-rows: auto minmax(800px, 1fr);
+  height: 100vh;
+  background-color: #ffffff;
+  place-items: center;
+}
+
+.content {
+  display: grid;
+  place-items: center;
+  grid-template-rows: auto auto auto; /* 제목, 입력, 버튼 */
+  gap: 40px;
+  width: 645px;
+  margin-top: -87px;
+}
+
+/* 폼 (로그인 박스) */
+.loginBox {
+  display: grid;
+  gap: 10px; /* 각 영역 사이 간격 */
+  width: 100%;
+  background: white;
+}
+
+/* 제목 */
+.title {
+  text-align: left;
+  color: #333;
+  font-weight: 600;
+  font-family: "Pretendard", Helvetica;
+  font-size: 40px;
+  width: 100%;
+  padding-left: 10px;
+}
+
+/* 입력 그룹 */
+.inputGroup {
+  display: grid;
+  grid-template-rows: auto auto;
+  gap: 4px; /* 레이블과 필드 간 간격 */
+  align-items: center;
+  padding: 10px;
+}
+
+/* 레이블 */
+.label {
+  font-size: 0.9rem;
+  text-align: left;
+  font-weight: 400;
+  font-size: 18px;
+  height: 24px;
+  font-family: "Pretendard", Helvetica;
+  color: #666666;
+}
+
+/* 입력 필드 */
+.input {
+  font-size: 1rem;
+  border: 1px solid #66666659;
+  border-radius: 4px;
+  height: 56px;
+  border-radius: 12px;
+}
+
+/* 버튼 영역 */
+.buttonSection {
+  text-align: center;
+}
+
+.button {
+  width: 100%;
+  padding: 10px;
+  color: white;
+  font-family: "Pretendard", Helvetica;
+  font-size: 24px;
+  font-weight: 500;
+  border-radius: 35.5px;
+  height: 71px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  background-color: #111111;
+}
+
+.button:hover {
+  background-color: #333333;
+}
+
+.rememberMe {
+  display: flex;
+  align-items: center; /* 수직 중앙 정렬 */
+  padding: 0px 8px 8px 10px;
+  margin-top: -10px;
+  font-family: "Poppins", Helvetica;
+  cursor: pointer;
+  gap: 8px;
+  width: 200px;
+}
+
+.checkBox {
+  width: 24px;
+}
+
+.rememberMeBox {
+  height: 64px;
+}
+
+.notiBox {
+  display: flex;
+  justify-content: center;
+  flex: 0 0 auto;
+  flex-direction: column;
+  gap: 65px;
+  margin-top: 35px;
+}
+
+.forgetYourPassword {
+  text-align: center;
+  font-family: "Pretendard", Helvetica;
+  font-size: 20px;
+  font-weight: 500;
+  margin-top: -1.00px;
+  text-decoration: underline;
+}
+
+.signUpMessage {
+  text-align: center;
+  color: #333333;
+  font-family: "Pretendard", Helvetica;
+  font-weight: 400;
+  font-size: 20px;
+}
+
+.signUpLink {
+  font-family: "Pretendard", Helvetica;
+  font-weight: 500;
+  color: #111111;
+}
