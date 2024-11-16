@@ -14,6 +14,17 @@ export const AuthProvider = ({ children }) => {
   const [isAuthenticated, setIsAuthenticated] = useState(false); // 로그인 여부
   const navigate = useNavigate();
 
+  const signup = async (userData) => {
+    try {
+      await authService.signup(userData); // 회원가입 API 호출
+      alert('Sign up successful! You can now log in.');
+      navigate('/login'); // 회원가입 성공 후 로그인 페이지로 이동
+    } catch (error) {
+      console.error('Signup error:', error);
+      alert(error.response?.data?.message || 'Sign up failed. Please try again.');
+    }
+  };
+
   const login = async (email, password) => {
     try {
       const { accessToken, refreshToken, user } = await authService.login(email, password);
@@ -44,7 +55,7 @@ export const AuthProvider = ({ children }) => {
   };
 
   return (
-    <AuthContext.Provider value={{ user, isAuthenticated, login, logout }}>
+    <AuthContext.Provider value={{ user, isAuthenticated, login, logout, signup }}>
       {children}
     </AuthContext.Provider>
   );

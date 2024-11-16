@@ -3,6 +3,12 @@ import axios from 'axios';
 
 const apiUrl = import.meta.env.VITE_API_URL;
 
+// 회원가입 API 호출
+export const signup = async (userData) => {
+  const response = await axios.post(`${apiUrl}/api/signup`, userData);
+  return response.data; // 서버로부터 반환된 데이터
+};
+
 // 로그인 요청
 export const login = async (email, password) => {
   const response = await axios.post(`${apiUrl}/api/login`, {
