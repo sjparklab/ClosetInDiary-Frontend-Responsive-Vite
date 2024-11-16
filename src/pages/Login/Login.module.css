@@ -58,9 +58,11 @@
 .input {
   font-size: 1rem;
   border: 1px solid #66666659;
+  font-family: "Pretendard", Helvetica;
   border-radius: 4px;
   height: 56px;
   border-radius: 12px;
+  padding: 10px
 }
 
 /* 버튼 영역 */
