@@ -1,0 +1,62 @@
+.header {
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: row;
+    gap: 25px;
+    justify-content: space-between;
+    margin: 0 67px 0 67px;
+    min-width: 950px;
+    align-items: center;
+}
+
+.logoMenu {
+    display: flex;
+    flex-direction: row;
+    gap: 67px;
+}
+
+.menu {
+    display: flex;
+    flex-direction: row;
+    gap: 67px;
+    text-align: center;
+    align-items: center;
+    font-family: "Pretendard", Helvetica;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.logo img {
+    width: 79px;
+}
+
+.userSearchNotice {
+    display: flex;
+    gap: 83px;
+}
+
+.userControl {
+    display: flex;
+    gap: 61px;
+    align-items: center;
+}
+
+.searchImage, .noticeImage {
+    width: 19px;
+}
+
+.searchNotice {
+    display: flex;
+    gap: 37px;
+    align-items: center;
+}
+
+.lowerArrow {
+    width: 12px;
+}
+
+.closetMenu {
+    display: flex;
+    gap: 9px;
+    align-items: center;
+}
