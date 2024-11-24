@@ -1,12 +1,12 @@
 .DiaryUploadContainer {
     display: grid;
     height: 100vh; /* 뷰포트 전체 높이 */
-    justify-items: center; /* 수평 중앙 정렬 */
+    justify-content: center; /* 수평 중앙 정렬 */
     align-items: center; /* 수직 중앙 정렬 */
 }
 
 .MainContainer{
- display:grid;
- grid-template-columns: 3fr 2fr;
+    display:grid;
+    grid-template-columns: 3fr 2fr;
 }
  
