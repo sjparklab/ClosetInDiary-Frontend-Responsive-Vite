@@ -1,0 +1,14 @@
+.DiaryUpload{
+display:grid;
+grid-template-rows: 1ft ;
+height:100%;
+align-items:center;
+justify-content: center;
+
+}
+
+
+.MainContainer{
+
+}
+ 
