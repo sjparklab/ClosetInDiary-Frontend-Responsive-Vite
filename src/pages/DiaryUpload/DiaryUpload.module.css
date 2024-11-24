@@ -10,14 +10,15 @@
 }
 
 .MainContainer {
-    display: grid;
-    grid-template-columns: 3fr 2fr;
-    gap: 10px;
+    display: flex;
+    /* grid-template-columns: 3fr 2fr; */
+    gap: 1px;
     height: 865px;
     min-width: 1200px;
 }
 
 .LeftBox {
+    width:747px;
     display: grid;
     grid-template-rows: 95px 638px 132px;
     background-color: #fff;
@@ -81,7 +82,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-
 }
 
 .FileSelectButton Button {
@@ -89,8 +89,6 @@
     gap: 30px;
     align-items: center;
     justify-content: space-between;
-    height: 50px;
-    width: 200px;
     width: 200px;
     height: 50px;
     top: 890px;
@@ -123,12 +121,15 @@
     padding: 34px 34px 32px 34px;
 
 }
+.UpBt{
+    padding: 34px 34px 32px 34px;
+}
 .UpBt2{
-    font-family: "Pretendard";
+    font-family: Pretendard;
     font-size: 20px;
     font-weight: 400;
     line-height: 23.87px;
-    text-align: left;
+    text-align: center;
     text-underline-position: from-font;
     text-decoration-skip-ink: none;
     color: rgba(255, 255, 255, 1);
@@ -138,16 +139,32 @@
     height: 50px;
     top: 890px;
     left: 956px;
-    padding: 10px 18px 10px 18px;
-    gap: 10px;
+    padding: 10px 15px 10px 15px;
     border-radius: 10px;
     opacity: 0px;
+    border:none;
     
 }
 
 .RightBox {
-    display: gird;
+    width:511px;
+    display: grid;
+    grid-template-rows: 664px 201px ;
     background-color: #fff;
     border-radius: 15px;
     box-shadow: 4px 4px 4px 4px #0000000d;
+    gap: 0px;
+
+}
+
+.MainImg{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 450px;
+    height: 606.25px;
+    gap: 0px;
+    border-radius: 10px;
+    margin: 56px auto;
+    background-color: #d9d9d9;
 }
