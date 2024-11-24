@@ -32,7 +32,23 @@ const DiaryUpload = () => {
                     </div>
                 </div>
                 <div className={styles.RightBox}>
-                    asdasddddddddddddddddddddddddddddddddddddddddddddddddd
+                    <div className={styles.MainImg}>
+                
+                    </div>
+                    <div className={styles.SubImg}>
+                        <div className={styles.SubImg1}>
+                        
+                        </div>
+                        <div className={styles.SubImg2}>
+                        
+                        </div>
+                        <div className={styles.SubImg3}>
+                        
+                        </div>
+                        <div className={styles.SubImg4}>
+                        
+                        </div>
+                    </div>
                 </div>
 
             </div>
