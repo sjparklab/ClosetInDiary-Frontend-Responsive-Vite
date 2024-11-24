@@ -68,7 +68,7 @@
     border: none;
     width: 100%;
     height: 100%;
-    resize: both;
+    resize: none;
     color: rgba(17, 17, 17, 1);
     letter-spacing: 0;
     font-family: "Pretendard", Helvetica;
@@ -78,11 +78,6 @@
 }
 
 
-.FileSelectButton {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
 
 .FileSelectButton Button {
     display: flex;
@@ -118,7 +113,7 @@
 .UploadButtons {
     display: flex;
     justify-content: space-between;
-    padding: 34px 34px 32px 34px;
+    padding: 50px 34px 32px 34px;
 
 }
 .UpBt{
@@ -170,14 +165,47 @@
 }
 .SubImg{
     display: flex;
-    grid-template-rows: 34px 34px ;
-    justify-content: center;
-    align-items: center;
-    gap: 0px;
-    margin: 56px auto;
-    background-color: #d9d9d9;
+    margin: 34px auto;
     width: 450px;
-    height:135px;
+    height:160px;
     gap: 29px;
     opacity: 0px;
+    overflow-x:auto;
+}
+
+.SubImg1{
+    width:90.5px;
+    min-width:90.5px;
+
+    height:134.29px;
+    background-color: #d9d9d9;
+}
+.SubImg2{
+    width:90.5px;
+    min-width:90.5px;
+
+    height:134.29px;
+    background-color: #d9d9d9;
+}
+.SubImg3{
+    width:90.5px;
+    min-width:90.5px;
+
+    height:134.29px;
+    background-color: #d9d9d9;
+}
+.SubImg4{
+    width:90.5px;
+    min-width:90.5px;
+
+    height:134.29px;
+    background-color: #d9d9d9;
+}
+
+.SubImg5{
+    width:90.5px;
+    min-width:90.5px;
+
+    height:134.29px;
+    background-color: #d9d9d9;
 }
