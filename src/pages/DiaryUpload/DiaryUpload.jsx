@@ -48,6 +48,9 @@ const DiaryUpload = () => {
                         <div className={styles.SubImg4}>
                         
                         </div>
+                        <div className={styles.SubImg5}>
+                        
+                        </div>
                     </div>
                 </div>
 
