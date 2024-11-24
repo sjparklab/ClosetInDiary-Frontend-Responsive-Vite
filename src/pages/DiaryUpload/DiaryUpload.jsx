@@ -6,7 +6,13 @@ const DiaryUpload = () => {
     return ( 
     <div className={styles.DiaryUploadContainer}>
         <div className={styles.MainContainer}>
-            dfsdfsdfsdf
+            <div className={styles.LeftBox}>
+                adfadfadfadfadfs
+            </div>
+            <div className={styles.RightBox}>
+                asdasdasdasdasd
+            </div>
+            
         </div>
     </div>
     );

@@ -5,7 +5,8 @@
     align-items: center; /* 수직 중앙 정렬 */
 }
 
-
-.MainContainer {
-    grid-template-columns: 3fr 2fr;
+.MainContainer{
+ display:grid;
+ grid-template-columns: 3fr 2fr;
 }
+ 
