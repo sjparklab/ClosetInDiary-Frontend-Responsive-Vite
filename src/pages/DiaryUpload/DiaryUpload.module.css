@@ -75,13 +75,7 @@
     font-size: 20px;
     font-weight: 300;
     line-height: normal;
-}
-
-
-.FileSelectButton {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    resize:none;
 }
 
 .FileSelectButton Button {
@@ -118,7 +112,7 @@
 .UploadButtons {
     display: flex;
     justify-content: space-between;
-    padding: 34px 34px 32px 34px;
+    padding: 50px 34px 32px 34px;
 
 }
 .UpBt{
