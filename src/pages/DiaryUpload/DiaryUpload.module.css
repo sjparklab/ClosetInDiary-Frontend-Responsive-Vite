@@ -1,12 +1,153 @@
 .DiaryUploadContainer {
     display: grid;
-    height: 100vh; /* 뷰포트 전체 높이 */
-    justify-content: center; /* 수평 중앙 정렬 */
-    align-items: center; /* 수직 중앙 정렬 */
+    height: 100vh;
+    /* 뷰포트 전체 높이 */
+    justify-content: center;
+    /* 수평 중앙 정렬 */
+    align-items: center;
+    /* 수직 중앙 정렬 */
+    background-color: #00000073;
 }
 
-.MainContainer{
-    display:grid;
+.MainContainer {
+    display: grid;
     grid-template-columns: 3fr 2fr;
+    gap: 10px;
+    height: 865px;
+    min-width: 1200px;
 }
- 
+
+.LeftBox {
+    display: grid;
+    grid-template-rows: 95px 638px 132px;
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 4px 4px 4px 4px #0000000d;
+}
+
+.UploadTitle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.25);
+    color: #111;
+    letter-spacing: 0;
+    white-space: nowrap;
+    font-family: "Pretendard", Helvetica;
+    font-size: 30px;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.UploadInput {
+    display: grid;
+    grid-template-rows: 58px 1fr;
+    gap: 40px;
+    color: black;
+    padding: 52px;
+}
+
+.InputTitle input {
+    border: none;
+    outline: none;
+    color: rgba(17, 17, 17, 1);
+    font-family: "Pretendard", Helvetica;
+    font-size: 25px;
+    font-weight: 500;
+    line-height: 29.83px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    padding-top: 10px;
+
+}
+
+.Inputcontent textarea {
+    outline: none;
+    border: none;
+    width: 100%;
+    height: 100%;
+    resize: both;
+    color: rgba(17, 17, 17, 1);
+    letter-spacing: 0;
+    font-family: "Pretendard", Helvetica;
+    font-size: 20px;
+    font-weight: 300;
+    line-height: normal;
+}
+
+
+.FileSelectButton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.FileSelectButton Button {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+    justify-content: space-between;
+    height: 50px;
+    width: 200px;
+    width: 200px;
+    height: 50px;
+    top: 890px;
+    left: 365px;
+    padding: 10px 18px 10px 18px;
+    gap: 10px;
+    border-radius: 10px;
+    opacity: 0px;
+    box-shadow: 4px 4px 10px 0px rgba(0, 0, 0, 0.25);
+    background: rgba(255, 255, 255, 1);
+    border: none;
+    font-family: Pretendard;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 23.87px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    color: rgba(17, 17, 17, 1);
+}
+
+.FileSelectButton img {
+    width: 30px;
+    height: 30px;
+}
+
+.UploadButtons {
+    display: flex;
+    justify-content: space-between;
+    padding: 34px 34px 32px 34px;
+
+}
+.UpBt2{
+    font-family: "Pretendard";
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 23.87px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    color: rgba(255, 255, 255, 1);
+    background: rgba(68, 68, 68, 1);
+    box-shadow: 4px 4px 10px 0px rgba(0, 0, 0, 0.25);
+    width: 88px;
+    height: 50px;
+    top: 890px;
+    left: 956px;
+    padding: 10px 18px 10px 18px;
+    gap: 10px;
+    border-radius: 10px;
+    opacity: 0px;
+    
+}
+
+.RightBox {
+    display: gird;
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 4px 4px 4px 4px #0000000d;
+}
