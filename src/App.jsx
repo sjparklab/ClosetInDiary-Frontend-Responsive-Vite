@@ -4,7 +4,7 @@ import LoginHeader from './components/LoginHeader'
 import Login from './pages/Login'
 import SignUp from './pages/SignUp'
 import NormalHeader from './components/NormalHeader'
-
+import DiaryUpload from './pages/DiaryUpload'
 import { AuthProvider } from './context/AuthContext';
 import Closet from './pages/Closet'
 
@@ -21,6 +21,7 @@ function App() {
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<SignUp />} />
         <Route path="/closet" element={<Closet />} />
+        <Route path="/diaryupload" element={<DiaryUpload />} />
       </Routes>
       </AuthProvider>
     </Router>
