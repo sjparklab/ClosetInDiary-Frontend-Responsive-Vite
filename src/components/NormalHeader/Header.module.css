@@ -4,9 +4,11 @@
     flex-direction: row;
     gap: 25px;
     justify-content: space-between;
-    margin: 0 67px 0 67px;
-    min-width: 950px;
+    margin: 77px 67px 0 67px;
+    min-width: 900px;
     align-items: center;
+    width: 100%;
+    max-width: 1786px;
 }
 
 .logoMenu {
@@ -24,6 +26,7 @@
     font-family: "Pretendard", Helvetica;
     font-size: 16px;
     font-weight: 700;
+    line-height: 24px;
 }
 
 .logo img {
@@ -39,6 +42,10 @@
     display: flex;
     gap: 61px;
     align-items: center;
+    font-family: "Pretendard", Helvetica;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 24px;
 }
 
 .searchImage, .noticeImage {

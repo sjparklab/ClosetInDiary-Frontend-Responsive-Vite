@@ -6,7 +6,7 @@ import SignUp from './pages/SignUp'
 import NormalHeader from './components/NormalHeader'
 
 import { AuthProvider } from './context/AuthContext';
-import Diary from './pages/Diary'
+import Closet from './pages/Closet'
 
 function App() {
   return (
@@ -20,7 +20,7 @@ function App() {
         {/* 페이지 구축 라우터 */}
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<SignUp />} />
-        <Route path="/diary" element={<Diary />} />
+        <Route path="/closet" element={<Closet />} />
       </Routes>
       </AuthProvider>
     </Router>

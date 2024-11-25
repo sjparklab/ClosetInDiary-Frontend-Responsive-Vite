@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "./Header.module.css";
 import classNames from "classnames";
-
+import lowerArrow from "../../assets/images/lowerArrow.png"
 const Header = ({ className }) => {
   // 로고 클릭 시 새로고침 함수
   const handleLogoClick = () => {
@@ -15,15 +15,15 @@ const Header = ({ className }) => {
           <img src="/logo.svg" alt="Logo" />
         </div>
         <div className={styles.menu}>
-          <div className={styles.closetMenu}>CLOSET <img src="/src/assets/images/lowerArrow.png" alt="lowerArrow" className={styles.lowerArrow}/></div>
-          <div className={styles.closetMenu}>DIARY <img src="/src/assets/images/lowerArrow.png" alt="lowerArrow" className={styles.lowerArrow}/></div>
-          <div className={styles.closetMenu}>FRIENDS <img src="/src/assets/images/lowerArrow.png" alt="lowerArrow" className={styles.lowerArrow}/></div>
+          <div className={styles.closetMenu}>CLOSET <img src={lowerArrow} alt="lowerArrow" className={styles.lowerArrow}/></div>
+          <div className={styles.closetMenu}>DIARY <img src={lowerArrow} alt="lowerArrow" className={styles.lowerArrow}/></div>
+          <div className={styles.closetMenu}>FRIENDS <img src={lowerArrow} alt="lowerArrow" className={styles.lowerArrow}/></div>
         </div>
       </div>
       <div className={styles.userSearchNotice}>
         <div className={styles.userControl}>
           <div className={styles.profile}>Profile</div>
-          <div className={styles.profile}>Sign Out</div>
+          <div className={styles.signout}>Sign Out</div>
         </div>
         <div className={styles.searchNotice}>
           <div className={styles.search}>
