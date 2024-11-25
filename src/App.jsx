@@ -13,6 +13,8 @@ function App() {
     <Router>
       <AuthProvider>
       <Routes>
+        {/* 루트 라우터 */}
+        <Route path="/*" element={<Closet />} />
         {/* 테스트용 라우터 */}
         <Route path="/test/login-header" element={<LoginHeader />} />
         <Route path="/test/normal-header" element={<NormalHeader />} />
