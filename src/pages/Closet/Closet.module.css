@@ -7,9 +7,11 @@
 .DiaryContainer {
     flex: 1;
     display: grid;
-    grid-template-rows: 130px 1fr 562px; /* 헤더: 80px, 메인: 유동적, 푸터: 60px */
+    grid-template-rows: 130px 1fr fit-content;
+    /* 헤더: 80px, 메인: 유동적, 푸터: 60px */
     gap: 77px;
     max-width: 1920px;
+    min-width: 960px;
 }
 
 .Header {
@@ -21,15 +23,18 @@
 
 .main {
     display: grid;
-    grid-template-areas: 
+    grid-template-areas:
         "sideleft categorySelector sideright"
         "sideleft content sideright"
-        "sideleft pagecontrol sideright"; /* 각 영역 정의 */
-    grid-template-columns: 200px 1fr 200px; /* 열 크기 */
+        "sideleft pagecontrol sideright";
+    /* 각 영역 정의 */
+    grid-template-columns: 200px 1fr 200px;
+    /* 열 크기 */
     height: 100%;
     width: 100%;
     justify-content: center;
     align-items: center;
+    max-width: 1920px;
 }
 
 .categorySelector {
@@ -63,8 +68,10 @@
 .categorySettigns {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
-    gap: 14px; /* 아이템 간 간격 */
-    justify-content: left; /* 가운데 정렬 */
+    gap: 14px;
+    /* 아이템 간 간격 */
+    justify-content: left;
+    /* 가운데 정렬 */
     /* display: flex;
     flex-wrap: wrap;
     gap: 14px;
@@ -86,26 +93,35 @@
     justify-content: center;
     background-color: #F5F5F5;
     border-radius: 10px;
-    width: 100%; /* 부모 컨테이너의 크기에 맞게 확장 */
-    height: auto; /* 높이를 유동적으로 설정 */
-    min-height: 124px; /* 최소 높이 설정 */
-    padding: 20px; /* 이미지 주위에 여백 추가 */
-    max-width: 289px; /* 상자 최대 크기 제한 */
+    width: 100%;
+    /* 부모 컨테이너의 크기에 맞게 확장 */
+    height: auto;
+    /* 높이를 유동적으로 설정 */
+    min-height: 124px;
+    /* 최소 높이 설정 */
+    padding: 20px;
+    /* 이미지 주위에 여백 추가 */
+    max-width: 289px;
+    /* 상자 최대 크기 제한 */
 }
 
 .categoryList img {
     width: 80px;
     height: 80px;
-    object-fit: contain; /* 이미지 비율 유지 */
+    object-fit: contain;
+    /* 이미지 비율 유지 */
 }
 
 .categorySettingsBox {
     display: flex;
     flex-direction: column;
     gap: 8px;
-    flex: 1; /* 부모 컨테이너에 맞춰 크기 조정 */
-    max-width: 300px; /* 상자 최대 크기 */
-    min-width: 100px; /* 상자 최소 크기 */
+    flex: 1;
+    /* 부모 컨테이너에 맞춰 크기 조정 */
+    max-width: 300px;
+    /* 상자 최대 크기 */
+    min-width: 100px;
+    /* 상자 최소 크기 */
 }
 
 .categorySettingsBox p {
@@ -115,4 +131,72 @@
     font-size: 20px;
     font-weight: 400;
     line-height: 18px;
+}
+
+/* Grid 전체를 감싸는 컨테이너 */
+.clothData {
+    grid-area: content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-top: 100px;
+    min-height: 30vh;
+}
+
+/* Grid 레이아웃 정의 */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(25%, 1fr));
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* 개별 Grid 아이템 스타일 */
+.gridItem {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    outline: 1px solid #000000;
+    text-align: center;
+    width: 100%;
+    min-width: 150px;
+    aspect-ratio: 2 / 3;
+}
+
+/* 이미지 스타일 */
+.gridImage {
+    width: 100%;
+    /* 부모 컨테이너에 맞게 가로를 채움 */
+    aspect-ratio: 2 / 3;
+    /* 가로 2, 세로 3 비율 */
+    object-fit: contain;
+    /* 이미지 비율을 유지하면서 컨테이너에 맞춤 */
+}
+
+.noDataMessage {
+    width: 100%;
+    text-align: center;
+    color: #111111;
+    font-family: "Pretendard", Helvetica;
+    font-size: 24px;
+    font-weight: 400;
+    letter-spacing: 0;
+    line-height: 24px;
+    white-space: nowrap;
+}
+
+/* 텍스트 스타일 */
+.gridText {
+    font-family: "Pretendard", Helvetica, Arial, sans-serif;
+    font-size: 16px;
+    color: #111;
+}
+
+.pageSelector {
+    grid-area: pagecontrol;
+    display: flex;
+    justify-content: center;
 }

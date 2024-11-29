@@ -1,0 +1,255 @@
+.category-footer {
+  align-items: center;
+  background-color: #ffffff;
+  display: flex;
+  gap: 81px;
+  justify-content: center;
+  min-height: 350.5px;
+  min-width: 1200px;
+  padding: 0 58px 58px 58px;
+  position: relative;
+  width: 100%;
+}
+
+.category-footer .frame {
+  align-items: center;
+  display: flex;
+  flex: 1;
+  flex-grow: 1;
+  justify-content: space-between;
+  position: relative;
+}
+
+.category-footer .group {
+  height: 322.5px;
+  position: relative;
+  width: 184px;
+}
+
+.category-footer .vector {
+  height: 89px;
+  left: 24px;
+  position: absolute;
+  top: 0;
+  width: 136px;
+}
+
+.category-footer .div {
+  height: 34px;
+  left: 0;
+  position: absolute;
+  top: 289px;
+  width: 186px;
+}
+
+.category-footer .text-wrapper {
+  color: var(--dark);
+  font-family: "Pretendard", Helvetica;
+  font-size: 18px;
+  font-weight: 300;
+  left: 0;
+  letter-spacing: 0;
+  line-height: 24px;
+  position: absolute;
+  text-align: justify;
+  top: 0;
+  white-space: nowrap;
+}
+
+.category-footer .line {
+  height: 1px;
+  left: 1px;
+  object-fit: cover;
+  position: absolute;
+  top: 33px;
+  width: 183px;
+}
+
+.category-footer .group-2 {
+  height: 334.5px;
+  position: relative;
+  width: 329px;
+}
+
+.category-footer .group-3 {
+  height: 334px;
+  left: 202px;
+  position: absolute;
+  top: 0;
+  width: 131px;
+}
+
+.category-footer .flexcontainer {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  height: 133px;
+  left: 34px;
+  position: absolute;
+  top: 48px;
+  width: 63px;
+}
+
+.category-footer .text {
+  align-self: stretch;
+  color: var(--dark);
+  font-family: "Pretendard", Helvetica;
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 22px;
+  opacity: 0.75;
+  position: relative;
+}
+
+.category-footer .span {
+  color: #09132e;
+  font-family: "Pretendard", Helvetica;
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: 0;
+  line-height: 22px;
+}
+
+.category-footer .text-wrapper-2 {
+  color: var(--dark);
+  font-family: "Pretendard", Helvetica;
+  font-size: 16px;
+  font-weight: 400;
+  left: 33px;
+  letter-spacing: 0;
+  line-height: 28px;
+  position: absolute;
+  top: 0;
+  white-space: nowrap;
+}
+
+.category-footer .group-4 {
+  height: 34px;
+  left: 0;
+  position: absolute;
+  top: 301px;
+  width: 129px;
+}
+
+.category-footer .img {
+  height: 1px;
+  left: 0;
+  object-fit: cover;
+  position: absolute;
+  top: 33px;
+  width: 127px;
+}
+
+.category-footer .sitemap {
+  height: 218px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 72px;
+}
+
+.category-footer .flexcontainer-2 {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  height: 170px;
+  left: 1px;
+  position: absolute;
+  top: 48px;
+  width: 67px;
+}
+
+.category-footer .text-wrapper-3 {
+  color: var(--dark);
+  font-family: "Pretendard", Helvetica;
+  font-size: 16px;
+  font-weight: 400;
+  left: 0;
+  letter-spacing: 0;
+  line-height: 28px;
+  position: absolute;
+  top: 0;
+  white-space: nowrap;
+}
+
+.category-footer .group-5 {
+  height: 333px;
+  margin-right: -10.00px;
+  position: relative;
+  width: 336px;
+}
+
+.category-footer .p {
+  color: var(--dark);
+  font-family: "Pretendard", Helvetica;
+  font-size: 15px;
+  font-weight: 400;
+  left: 0;
+  letter-spacing: 0;
+  line-height: 22px;
+  opacity: 0.75;
+  position: absolute;
+  top: 48px;
+  width: 302px;
+}
+
+.category-footer .text-wrapper-4 {
+  color: var(--dark);
+  font-family: "Pretendard", Helvetica;
+  font-size: 16px;
+  font-weight: 400;
+  left: 0;
+  letter-spacing: 0;
+  line-height: 28px;
+  position: absolute;
+  top: 127px;
+  white-space: nowrap;
+}
+
+.category-footer .line-2 {
+  height: 1px;
+  left: 0;
+  object-fit: cover;
+  position: absolute;
+  top: 217px;
+  width: 326px;
+}
+
+.category-footer .text-wrapper-5 {
+  color: var(--dark);
+  font-family: "Pretendard", Helvetica;
+  font-size: 14px;
+  font-weight: 400;
+  left: 0;
+  letter-spacing: 0;
+  line-height: 22px;
+  opacity: 0.7;
+  position: absolute;
+  top: 178px;
+  white-space: nowrap;
+}
+
+.category-footer .group-6 {
+  height: 17px;
+  left: 302px;
+  position: absolute;
+  top: 181px;
+  width: 24px;
+}
+
+.category-footer .element-ST-all-rights {
+  color: var(--dark);
+  font-family: "Pretendard", Helvetica;
+  font-size: 12px;
+  font-weight: 400;
+  left: 0;
+  letter-spacing: 0;
+  line-height: 20px;
+  opacity: 0.6;
+  position: absolute;
+  top: 313px;
+  white-space: nowrap;
+}
