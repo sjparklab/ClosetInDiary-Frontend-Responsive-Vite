@@ -1,17 +1,17 @@
-.category-footer {
+.categoryFooter {
   align-items: center;
   background-color: #ffffff;
   display: flex;
   gap: 81px;
   justify-content: center;
   min-height: 350.5px;
-  min-width: 1200px;
+  min-width: 1000px;
   padding: 0 58px 58px 58px;
   position: relative;
   width: 100%;
 }
 
-.category-footer .frame {
+.frame {
   align-items: center;
   display: flex;
   flex: 1;
@@ -20,13 +20,13 @@
   position: relative;
 }
 
-.category-footer .group {
+.group {
   height: 322.5px;
   position: relative;
   width: 184px;
 }
 
-.category-footer .vector {
+.vector {
   height: 89px;
   left: 24px;
   position: absolute;
@@ -34,7 +34,7 @@
   width: 136px;
 }
 
-.category-footer .div {
+.div {
   height: 34px;
   left: 0;
   position: absolute;
@@ -42,7 +42,7 @@
   width: 186px;
 }
 
-.category-footer .text-wrapper {
+.textWrapper {
   color: var(--dark);
   font-family: "Pretendard", Helvetica;
   font-size: 18px;
@@ -56,7 +56,7 @@
   white-space: nowrap;
 }
 
-.category-footer .line {
+.line {
   height: 1px;
   left: 1px;
   object-fit: cover;
@@ -65,13 +65,13 @@
   width: 183px;
 }
 
-.category-footer .group-2 {
+.group2 {
   height: 334.5px;
   position: relative;
   width: 329px;
 }
 
-.category-footer .group-3 {
+.group3 {
   height: 334px;
   left: 202px;
   position: absolute;
@@ -79,7 +79,7 @@
   width: 131px;
 }
 
-.category-footer .flexcontainer {
+.flexContainer {
   align-items: flex-start;
   display: flex;
   flex-direction: column;
@@ -91,7 +91,7 @@
   width: 63px;
 }
 
-.category-footer .text {
+.text {
   align-self: stretch;
   color: var(--dark);
   font-family: "Pretendard", Helvetica;
@@ -103,7 +103,7 @@
   position: relative;
 }
 
-.category-footer .span {
+.span {
   color: #09132e;
   font-family: "Pretendard", Helvetica;
   font-size: 14px;
@@ -112,7 +112,7 @@
   line-height: 22px;
 }
 
-.category-footer .text-wrapper-2 {
+.textWrapper2 {
   color: var(--dark);
   font-family: "Pretendard", Helvetica;
   font-size: 16px;
@@ -125,7 +125,7 @@
   white-space: nowrap;
 }
 
-.category-footer .group-4 {
+.group4 {
   height: 34px;
   left: 0;
   position: absolute;
@@ -133,7 +133,7 @@
   width: 129px;
 }
 
-.category-footer .img {
+.img {
   height: 1px;
   left: 0;
   object-fit: cover;
@@ -142,7 +142,7 @@
   width: 127px;
 }
 
-.category-footer .sitemap {
+.sitemap {
   height: 218px;
   left: 0;
   position: absolute;
@@ -150,7 +150,7 @@
   width: 72px;
 }
 
-.category-footer .flexcontainer-2 {
+.flexContainer2 {
   align-items: flex-start;
   display: flex;
   flex-direction: column;
@@ -162,7 +162,7 @@
   width: 67px;
 }
 
-.category-footer .text-wrapper-3 {
+.textWrapper3 {
   color: var(--dark);
   font-family: "Pretendard", Helvetica;
   font-size: 16px;
@@ -175,14 +175,14 @@
   white-space: nowrap;
 }
 
-.category-footer .group-5 {
+.group5 {
   height: 333px;
   margin-right: -10.00px;
   position: relative;
   width: 336px;
 }
 
-.category-footer .p {
+.p {
   color: var(--dark);
   font-family: "Pretendard", Helvetica;
   font-size: 15px;
@@ -196,7 +196,7 @@
   width: 302px;
 }
 
-.category-footer .text-wrapper-4 {
+.textWrapper4 {
   color: var(--dark);
   font-family: "Pretendard", Helvetica;
   font-size: 16px;
@@ -209,7 +209,7 @@
   white-space: nowrap;
 }
 
-.category-footer .line-2 {
+.line2 {
   height: 1px;
   left: 0;
   object-fit: cover;
@@ -218,7 +218,7 @@
   width: 326px;
 }
 
-.category-footer .text-wrapper-5 {
+.textWrapper5 {
   color: var(--dark);
   font-family: "Pretendard", Helvetica;
   font-size: 14px;
@@ -232,7 +232,7 @@
   white-space: nowrap;
 }
 
-.category-footer .group-6 {
+.group6 {
   height: 17px;
   left: 302px;
   position: absolute;
@@ -240,7 +240,7 @@
   width: 24px;
 }
 
-.category-footer .element-ST-all-rights {
+.elementSTAllRights {
   color: var(--dark);
   font-family: "Pretendard", Helvetica;
   font-size: 12px;
