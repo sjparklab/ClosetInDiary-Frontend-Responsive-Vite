@@ -9,6 +9,7 @@ import { AuthProvider } from './context/AuthContext';
 import Closet from './pages/Closet'
 import ClosetAddPage from './pages/ClosetAddPage'
 import Footer from './components/Footer'
+import MyProfile from './pages/MyProfile'
 
 function App() {
   return (
@@ -28,6 +29,7 @@ function App() {
         <Route path="/signup" element={<SignUp />} />
         <Route path="/closet" element={<Closet />} />
         <Route path="/closet/add-new" element={<ClosetAddPage />} />
+        <Route path="/profile" element={<MyProfile />} />
         <Route path="/diaryupload" element={<DiaryUpload />} />
       </Routes>
       </AuthProvider>
