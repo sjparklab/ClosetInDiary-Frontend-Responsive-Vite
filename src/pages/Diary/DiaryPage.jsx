@@ -5,6 +5,9 @@ import { PaginationPage } from "../../components/PaginationPage";
 import styles from "./DiaryPage.module.css";
 import Header from "../../components/NormalHeader";
 import Footer from "../../components/Footer";
+import apiClient from "../../services/apiClient"; // 위에서 주신 apiClient 코드가 있는 경로
+import plusbutton from "./plusbutton.svg"
+import DiaryUpload from "../../pages/DiaryUpload";
 
 const DiaryNewest = () => {
   const [diaries, setDiaries] = useState([]);
@@ -12,15 +15,31 @@ const DiaryNewest = () => {
   const itemsPerPage = 16; // 최대 16개
 
   useEffect(() => {
-    // 실제 API 엔드포인트로 변경 필요.
-    // 예: "https://api.example.com/diaries"
-    fetch("/api/diaries")
-      .then((res) => res.json())
-      .then((data) => {
-        // data가 [{text: "날짜", text1:"내용"}, ...] 형태라고 가정
-        setDiaries(data);
-      })
-      .catch((error) => console.error(error));
+    async function loadDiaries() {
+      try {
+        const { data } = await apiClient.get("/diaries");
+        // data: [{ text: "2024-11-01", text1: "내용", imagePath: "/images/1" }, ...]
+
+        const diariesWithBlobs = [];
+        for (const diary of data) {
+          let blobImage = null;
+          if (diary.imagePath) {
+            const imageResponse = await apiClient.get(diary.imagePath, { responseType: 'blob' });
+            blobImage = imageResponse.data;
+          }
+          diariesWithBlobs.push({
+            ...diary,
+            blobImage
+          });
+        }
+
+        setDiaries(diariesWithBlobs);
+      } catch (error) {
+        console.error(error);
+      }
+    }
+
+    loadDiaries();
   }, []);
 
   const totalPages = Math.ceil(diaries.length / itemsPerPage);
@@ -40,6 +59,16 @@ const DiaryNewest = () => {
     if (currentPage < totalPages) {
       setCurrentPage(currentPage + 1);
     }
+  };
+
+  const [showModal, setShowModal] = useState(false);
+
+  const handleOpenModal = () => {
+    setShowModal(true);
+  };
+
+  const handleCloseModal = () => {
+    setShowModal(false);
   };
 
   return (
@@ -69,7 +98,7 @@ const DiaryNewest = () => {
                     className={styles["daily-look-list-instance"]}
                     text={item.text}
                     text1={item.text1}
-                    // 필요하다면 frameClassName, divClassName도 적용 가능
+                  // 필요하다면 frameClassName, divClassName도 적용 가능
                   />
                 ))
               ) : (
@@ -131,7 +160,20 @@ const DiaryNewest = () => {
             </div>
           </div>
         )}
+        {/* 추가 버튼 */}
+        <button className={styles["add-button"]} onClick={handleOpenModal}>
+          <img src={plusbutton} alt="" />
+        </button>
+
+        {showModal && (
+  <div className={styles["modal-overlay"]} onClick={handleCloseModal}>
+      <div onClick={(e) => e.stopPropagation()}>
+          <DiaryUpload />
       </div>
+  </div>
+)}
+      </div>
+
       <Footer />
     </>
   );
