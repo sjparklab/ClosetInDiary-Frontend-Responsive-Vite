@@ -4,6 +4,8 @@ import classNames from "classnames";
 import { useAuth } from "../../context/AuthContext"; // AuthContext의 useAuth 훅을 가져옴
 import { useNavigate } from "react-router-dom";
 import lowerArrow from "../../assets/images/lowerArrow.png";
+import searchicon from "../../assets/images/search-3.png";
+import notiicon from "../../assets/images/notifications-3.png";
 
 const Header = ({ className }) => {
   const { logout } = useAuth(); // logout 메서드 가져오기
@@ -22,13 +24,13 @@ const Header = ({ className }) => {
             <img src="/logo.svg" alt="Logo" />
           </div>
           <div className={styles.menu}>
-            <div className={styles.closetMenu}>
+            <div className={styles.closetMenu} onClick={() => navigate("/closet")}>
               CLOSET <img src={lowerArrow} alt="lowerArrow" className={styles.lowerArrow} />
             </div>
-            <div className={styles.closetMenu}>
+            <div className={styles.closetMenu} onClick={() => navigate("/diary")}>
               DIARY <img src={lowerArrow} alt="lowerArrow" className={styles.lowerArrow} />
             </div>
-            <div className={styles.closetMenu}>
+            <div className={styles.closetMenu} onClick={() => navigate("/friends")}>
               FRIENDS <img src={lowerArrow} alt="lowerArrow" className={styles.lowerArrow} />
             </div>
           </div>
@@ -54,14 +56,14 @@ const Header = ({ className }) => {
               <img
                 className={styles.searchImage}
                 alt="Search"
-                src="/src/assets/images/search-3.png"
+                src={searchicon}
               />
             </div>
             <div className={styles.notice}>
               <img
                 className={styles.noticeImage}
                 alt="Notifications"
-                src="/src/assets/images/notifications-3.png"
+                src={notiicon}
               />
             </div>
           </div>

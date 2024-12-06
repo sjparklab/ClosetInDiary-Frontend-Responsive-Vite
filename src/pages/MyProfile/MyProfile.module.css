@@ -112,6 +112,9 @@ main {
 
 .editDeleteButton2 {
   color: #222222b2 !important;
+  background-color: transparent;
+  appearance: none;
+  border: none;
 }
 
 .frame9 {
@@ -142,6 +145,9 @@ main {
   height: 400px;
   position: relative;
   width: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .frame12 {
@@ -185,9 +191,10 @@ main {
   letter-spacing: 0;
   line-height: 28px;
   position: relative;
-  text-align: center;
+  text-align: left;
   white-space: nowrap;
   width: fit-content;
+  border: none;
 }
 
 .frame14 {
@@ -212,4 +219,9 @@ main {
   margin-top: -1.00px;
   position: relative;
   width: 108px;
+}
+
+/* 플러스 버튼 이미지 스타일 */
+.plusButton {
+  cursor: pointer;
 }

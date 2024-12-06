@@ -9,7 +9,8 @@ import apiClient from "../../services/apiClient";
 
 const ClosetAddClothes = () => {
   const [selectedOption, setSelectedOption] = useState(""); // 선택된 값 관리
-  const [uploadedImage, setUploadedImage] = useState(frame53); // 업로드된 이미지 관리 (초기값은 기본 이미지)
+  const [uploadedImage, setUploadedImage] = useState(frame53); // 미리보기용 이미지 URL
+  const [fileToUpload, setFileToUpload] = useState(null); // 서버로 전송할 File 객체
 
   const [inputs, setInputs] = useState({
     reason: "",
@@ -25,16 +26,24 @@ const ClosetAddClothes = () => {
   const handleImageUpload = (e) => {
     const file = e.target.files[0];
     if (file) {
-      setUploadedImage(file); // File 객체를 그대로 저장
+      setFileToUpload(file); // 서버 전송용으로 File 객체 저장
+
+      // 미리보기를 위해 FileReader 사용
+      const reader = new FileReader();
+      reader.onload = () => {
+        setUploadedImage(reader.result); // 데이터 URL로 변환된 이미지를 미리보기용으로 저장
+      };
+      reader.readAsDataURL(file); // File 객체를 데이터 URL로 읽기
     }
   };
+
 
   const handleUpload = async () => {
     console.log("test");
     const formData = new FormData();
 
     // FormData에 데이터 추가
-    formData.append("file", uploadedImage); // File 객체로 전송
+    formData.append("file", fileToUpload); // File 객체로 전송
     formData.append("category", selectedOption);
     formData.append("reason", inputs.reason);
     formData.append("purchaseDate", inputs.purchaseDate);
@@ -47,6 +56,17 @@ const ClosetAddClothes = () => {
       });
       alert("옷 정보가 성공적으로 업로드되었습니다!");
       console.log(response.data);
+
+      // 입력 필드 초기화
+      setInputs({
+        reason: "",
+        purchaseDate: "",
+        brand: "",
+        size: "",
+      });
+      setSelectedOption(""); // 선택된 카테고리 초기화
+      setUploadedImage(frame53); // 업로드된 이미지 초기화 (기본 이미지로 복원)
+      setFileToUpload(null); // 파일 상태 초기화
     } catch (error) {
       console.error("업로드 실패:", error);
       alert("업로드 중 문제가 발생했습니다.");
@@ -90,6 +110,7 @@ const ClosetAddClothes = () => {
                       className={styles.textWrapper3}
                       placeholder="계기를 입력해주세요"
                       name="reason" // 추가
+                      value={inputs.reason} // 상태와 연결
                       onChange={(e) => setInputs({ ...inputs, reason: e.target.value })} // 값 반영
                     />
 
@@ -133,6 +154,7 @@ const ClosetAddClothes = () => {
                           placeholder="구매일을 입력해주세요"
                           type="date" // 날짜 입력을 강제
                           name="purchaseDate" // 추가
+                          value={inputs.purchaseDate} // 상태와 연결
                           onChange={(e) => setInputs({ ...inputs, purchaseDate: e.target.value })} // 값 반영
                         />
                       </div>
@@ -146,6 +168,7 @@ const ClosetAddClothes = () => {
                           className={styles.textWrapper6}
                           placeholder="브랜드를 입력해주세요"
                           name="brand" // 추가
+                          value={inputs.brand} // 상태와 연결
                           onChange={(e) => setInputs({ ...inputs, brand: e.target.value })} // 값 반영
                         />
                       </div>
@@ -159,6 +182,7 @@ const ClosetAddClothes = () => {
                           className={styles.textWrapper6}
                           placeholder="사이즈를 입력해주세요"
                           name="size" // 추가
+                          value={inputs.size} // 상태와 연결
                           onChange={(e) => setInputs({ ...inputs, size: e.target.value })} // 값 반영
                         />
                       </div>
