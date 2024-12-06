@@ -150,6 +150,13 @@ main {
   align-items: center;
 }
 
+.uploadedPhoto {
+  width: 100%; /* frame11 안에 꽉 차도록 설정 */
+  height: 100%;
+  object-fit: cover; /* 사진 비율을 유지하며 꽉 채우기 */
+  border-radius: 200px;
+}
+
 .frame12 {
   align-items: center;
   display: flex;

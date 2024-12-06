@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { useNavigate } from "react-router-dom";
 import styles from "./MyProfile.module.css";
 import Header from "../../components/NormalHeader";
@@ -10,45 +10,81 @@ const MyProfile = () => {
   const [isEditing, setIsEditing] = useState(false); // 수정 모드 여부 상태
   const [profile, setProfile] = useState({
     name: "",
-    intro: "",
+    onelineInfo: "",
+    profilePicture: null, // 단일 이미지 업로드
   });
 
-  // 서버에서 유저 데이터를 가져오는 함수
+  const fileInputRef = useRef(null); // 파일 업로드 input 참조
+
   const fetchUserData = async () => {
     try {
-      const response = await apiClient.get("/user-data"); // 유저 정보를 가져오는 API
-      const data = response.data;
-
-      // null 값 처리
+      // 사용자 기본 정보 가져오기
+      const userInfoResponse = await apiClient.get("/user-data");
+      const userInfo = userInfoResponse.data;
+  
+      // 사용자 프로필 사진 가져오기
+      const profilePictureResponse = await apiClient.get("/user-profile-picture", {
+        responseType: "blob", // 이미지 데이터를 Blob으로 받음
+      });
+  
+      // Blob 데이터를 URL로 변환
+      const profilePictureUrl = URL.createObjectURL(profilePictureResponse.data);
+  
+      // 상태 업데이트
       setProfile({
-        name: data.name || "", // null일 경우 빈 문자열로 대체
-        intro: data.intro || "", // null일 경우 빈 문자열로 대체
+        name: userInfo.name || "이름 없음",
+        onelineInfo: userInfo.onelineInfo || "소개 없음",
+        profilePicture: profilePictureUrl, // Blob URL 설정
       });
     } catch (error) {
-      console.error("유저 정보를 가져오는 중 오류 발생:", error);
+      console.error("유저 데이터 가져오기 오류:", error);
     }
   };
 
-  // 수정된 유저 데이터를 서버에 PUT 요청으로 전송
+  useEffect(() => {
+    fetchUserData();
+    return () => {
+      // Blob URL 해제
+      if (profile.profilePicture) {
+        URL.revokeObjectURL(profile.profilePicture);
+      }
+    };
+  }, []);
+
+
   const saveUserData = async () => {
-    console.log("saveUserData 호출됨");
     try {
-      console.log("API 호출 시작");
-      const response = await apiClient.put("/user-data", profile); // 프로필 저장 API 호출
+      const formData = new FormData();
+      formData.append("name", profile.name);
+      formData.append("intro", profile.onelineInfo);
+
+      // 프로필 사진 Blob 추가
+      if (profile.profilePicture instanceof Blob) {
+        formData.append("file", profile.profilePicture);
+      }
+
+      const response = await apiClient.put("/user-data", formData, {
+        headers: { "Content-Type": "multipart/form-data" },
+      });
+
       console.log("API 호출 성공:", response.data);
       alert("프로필이 성공적으로 저장되었습니다!");
       setIsEditing(false); // 저장 후 수정 모드 종료
     } catch (error) {
       console.error("프로필 저장 중 오류 발생:", error);
       alert("프로필 저장 중 오류가 발생했습니다.");
-      setIsEditing(false); // 저장 후 수정 모드 종료
     }
   };
 
+
   // 컴포넌트가 마운트될 때 유저 데이터 가져오기
   useEffect(() => {
-    fetchUserData();
-  }, []);
+    return () => {
+      if (profile.profilePicture instanceof File) {
+        URL.revokeObjectURL(profile.profilePicture);
+      }
+    };
+  }, [profile.profilePicture]);
 
   const handleEditToggle = async () => {
     if (isEditing) {
@@ -72,9 +108,36 @@ const MyProfile = () => {
     }));
   };
 
-  const handlePlusClick = () => {
-    alert("플러스 버튼 클릭됨!"); // 원하는 동작 추가
+  const handlePhotoUpload = (e) => {
+    const file = e.target.files[0];
+    if (file) {
+      setProfile((prev) => ({
+        ...prev,
+        profilePicture: file, // Blob 객체 저장
+      }));
+    }
   };
+
+  const getImageSrc = () => {
+    if (!profile.profilePicture) {
+      // profilePicture 값이 비어있으면 null 반환
+      return null;
+    }
+
+    if (profile.profilePicture instanceof File || profile.profilePicture instanceof Blob) {
+      // File 또는 Blob 객체인 경우 URL 생성
+      return URL.createObjectURL(profile.profilePicture);
+    }
+
+    if (typeof profile.profilePicture === "string") {
+      // 문자열 (Base64 데이터나 URL)인 경우 그대로 반환
+      return profile.profilePicture;
+    }
+
+    // 그 외 데이터 타입은 null 반환
+    return null;
+  };
+
 
   return (
     <div className={styles.ProfileContainer}>
@@ -106,16 +169,31 @@ const MyProfile = () => {
               <div className={styles.frame10}>
                 <div
                   className={styles.frame11}
-                  onClick={isEditing ? handlePlusClick : undefined} // 수정 모드일 때만 클릭 동작 활성화
+                  onClick={isEditing ? () => fileInputRef.current.click() : undefined}
                 >
-                  {/* 수정 모드일 때만 플러스 버튼 이미지 표시 */}
-                  {isEditing && (
+                  {getImageSrc() ? (
                     <img
-                      src={Frame44}
-                      alt="플러스 버튼"
-                      className={styles.plusButton}
+                      src={getImageSrc()}
+                      alt="Uploaded"
+                      className={styles.uploadedPhoto}
                     />
+                  ) : (
+                    isEditing && (
+                      <div className={styles.plusButtonWrapper}>
+                        <img src={Frame44} alt="플러스 버튼" className={styles.plusButton} />
+                      </div>
+                    )
                   )}
+
+                  {/* 숨겨진 파일 업로드 input */}
+                  <input
+                    ref={fileInputRef}
+                    id="photo-upload-input"
+                    type="file"
+                    accept="image/*"
+                    style={{ display: "none" }}
+                    onChange={handlePhotoUpload}
+                  />
                 </div>
 
                 <div className={styles.frame12}>
@@ -144,14 +222,16 @@ const MyProfile = () => {
                     {isEditing ? (
                       <input
                         type="text"
-                        name="intro"
-                        value={profile.intro}
+                        name="onelineInfo"
+                        value={profile.onelineInfo}
                         placeholder="한줄소개가 비어있어요."
                         onChange={handleInputChange}
                         className={styles.textWrapper3}
                       />
                     ) : (
-                      <div className={styles.textWrapper3}>{profile.intro || "한줄소개가 비어있어요."}</div>
+                      <div className={styles.textWrapper3}>
+                        {profile.onelineInfo || "한줄소개가 비어있어요."}
+                      </div>
                     )}
                   </div>
                 </div>
