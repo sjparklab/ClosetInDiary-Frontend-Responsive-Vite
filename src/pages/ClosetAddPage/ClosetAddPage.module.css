@@ -136,7 +136,7 @@
 }
 
 .textWrapper3 {
-  color: #66666659;
+  color: black;
   font-family: "Pretendard", Helvetica;
   font-size: 15px;
   font-weight: 300;
@@ -145,6 +145,7 @@
   margin-top: -1px;
   position: relative;
   width: 289px;
+  border: none;
 }
 
 .frame8 {
@@ -197,29 +198,29 @@
 
 .frame11 {
   align-items: center;
-  border-bottom-style: solid;
-  border-bottom-width: 1px;
-  border-color: #66666659;
+  border-bottom: 1px solid #66666659;
   display: flex;
   gap: 16px;
-  justify-content: center;
-  padding: 10px 0px;
+  justify-content: left;
+  padding: 10px 0;
   position: relative;
   width: 175px;
 }
 
 .textWrapper5 {
-  color: #66666659;
+  background: transparent; /* 배경 투명 */
+  border: none;
+  color: black;
   font-family: "Pretendard", Helvetica;
   font-size: 15px;
   font-weight: 300;
   letter-spacing: 0;
-  line-height: 10px;
+  line-height: 15px;
   margin-left: -0.5px;
   margin-top: -1px;
-  position: relative;
-  text-align: center;
-  width: 148px;
+  outline: none;
+  text-align: left;
+  width: 100%;
 }
 
 .keyboardArrowDown2 {
@@ -227,6 +228,14 @@
   margin-right: -0.5px;
   position: relative;
   width: 12px;
+}
+
+/* 드롭다운 옵션 스타일 */
+.textWrapper5 option {
+  color: #111111;
+  background-color: #ffffff;
+  font-family: "Pretendard-Light", Helvetica;
+  font-size: 15px;
 }
 
 .frame12 {
@@ -253,7 +262,7 @@
 }
 
 .textWrapper6 {
-  color: #66666659;
+  color: black;
   font-family: "Pretendard", Helvetica;
   font-size: 15px;
   font-weight: 300;
@@ -261,9 +270,10 @@
   line-height: 10px;
   margin-top: -1px;
   position: relative;
-  text-align: center;
+  text-align: left;
   white-space: nowrap;
-  width: fit-content;
+  width: 100%;
+  border: none;
 }
 
 .textWrapper7 {
