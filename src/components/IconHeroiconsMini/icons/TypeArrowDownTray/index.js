@@ -1,0 +1,1 @@
+export { TypeArrowDownTray } from "./TypeArrowDownTray";

@@ -1,0 +1,1 @@
+export { TypeChatBubbleBottomCenterText } from "./TypeChatBubbleBottomCenterText";

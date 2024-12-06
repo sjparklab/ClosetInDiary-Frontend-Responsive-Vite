@@ -1,0 +1,1 @@
+export { TypeLanguage } from "./TypeLanguage";

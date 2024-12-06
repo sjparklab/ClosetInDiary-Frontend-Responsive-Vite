@@ -1,0 +1,1 @@
+export { TypeAdjustmentsHorizontal } from "./TypeAdjustmentsHorizontal";

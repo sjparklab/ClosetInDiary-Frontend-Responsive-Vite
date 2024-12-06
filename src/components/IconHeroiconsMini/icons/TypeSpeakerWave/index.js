@@ -1,0 +1,1 @@
+export { TypeSpeakerWave } from "./TypeSpeakerWave";

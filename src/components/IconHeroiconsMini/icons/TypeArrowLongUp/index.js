@@ -1,0 +1,1 @@
+export { TypeArrowLongUp } from "./TypeArrowLongUp";

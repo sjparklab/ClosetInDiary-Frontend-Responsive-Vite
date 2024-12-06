@@ -1,0 +1,1 @@
+export { TypePlusSmall } from "./TypePlusSmall";

@@ -1,0 +1,1 @@
+export { TypeArrowLeftOnRectangle } from "./TypeArrowLeftOnRectangle";

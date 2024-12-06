@@ -1,0 +1,1 @@
+export { TypePlayPause } from "./TypePlayPause";

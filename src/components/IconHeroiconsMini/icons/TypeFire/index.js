@@ -1,0 +1,1 @@
+export { TypeFire } from "./TypeFire";

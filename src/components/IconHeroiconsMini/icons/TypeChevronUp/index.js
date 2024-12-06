@@ -1,0 +1,1 @@
+export { TypeChevronUp } from "./TypeChevronUp";

@@ -1,0 +1,1 @@
+export { TypeCubeTransparent } from "./TypeCubeTransparent";

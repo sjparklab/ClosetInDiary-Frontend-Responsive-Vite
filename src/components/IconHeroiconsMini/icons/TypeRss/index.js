@@ -1,0 +1,1 @@
+export { TypeRss } from "./TypeRss";

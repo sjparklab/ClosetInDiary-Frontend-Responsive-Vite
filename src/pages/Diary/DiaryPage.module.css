@@ -1,0 +1,292 @@
+.diary-newest {
+    align-items: center;
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    gap: 58px;
+    min-height: 50vh;
+    height: 100%;
+    justify-content: center;
+    position: relative;
+    margin-top: 70px;
+  }
+  
+  .group {
+    height: 752px;
+    position: relative;
+    width: 1512px;
+  }
+  
+  .div-wrapper {
+    align-items: center;
+    border-bottom-style: solid;
+    border-bottom-width: 5px;
+    border-color: #111111;
+    display: flex;
+    gap: 10px;
+    left: 22px;
+    padding: 15px 0px;
+    position: absolute;
+    top: 0;
+    width: 352px;
+  }
+  
+  .text-wrapper-2 {
+    color: #111111;
+    font-family: "Pretendard", Helvetica;
+    font-size: 36px;
+    font-weight: 600;
+    letter-spacing: 0;
+    line-height: 35px;
+    margin-top: -5.00px;
+    position: relative;
+    white-space: nowrap;
+    width: fit-content;
+  }
+  
+  .group-2 {
+    height: 597px;
+    left: 0;
+    position: absolute;
+    top: 155px;
+    width: 1512px;
+  }
+  
+  .group-3 {
+    height: 12px;
+    left: 1341px;
+    position: absolute;
+    top: 0;
+    width: 171px;
+  }
+  
+  .frame-2 {
+    align-items: center;
+    border-color: #ebebeb;
+    border-right-style: solid;
+    border-right-width: 1px;
+    display: inline-flex;
+    gap: 10px;
+    height: 12px;
+    justify-content: center;
+    left: 0;
+    padding: 10px 15px;
+    position: absolute;
+    top: 0;
+  }
+  
+  .text-wrapper-3 {
+    color: #4e4e4e;
+    font-family: "Pretendard", Helvetica;
+    font-size: 17px;
+    font-weight: 700;
+    letter-spacing: 0;
+    line-height: 18px;
+    margin-bottom: -12.00px;
+    margin-top: -14.00px;
+    position: relative;
+    white-space: nowrap;
+    width: fit-content;
+  }
+  
+  .frame-3 {
+    align-items: center;
+    display: inline-flex;
+    gap: 10px;
+    height: 12px;
+    justify-content: center;
+    left: 77px;
+    padding: 10px 15px;
+    position: absolute;
+    top: 0;
+  }
+  
+  .text-wrapper-4 {
+    color: #4e4e4e;
+    font-family: "Pretendard", Helvetica;
+    font-size: 17px;
+    font-weight: 400;
+    letter-spacing: 0;
+    line-height: 18px;
+    margin-bottom: -12.00px;
+    margin-top: -14.00px;
+    position: relative;
+    white-space: nowrap;
+    width: fit-content;
+  }
+  
+  .group-4 {
+    height: 559px;
+    left: 0;
+    position: absolute;
+    top: 38px;
+    width: 1500px;
+  }
+  
+  .daily-look-list-instance {
+    left: 1140px !important;
+    position: absolute !important;
+    top: 0 !important;
+  }
+  
+  .design-component-instance-node {
+    display: inline-flex !important;
+    left: 3px !important;
+    width: unset !important;
+  }
+  
+  .daily-look-list-2 {
+    left: 760px !important;
+    position: absolute !important;
+    top: 0 !important;
+  }
+  
+  .daily-look-list-3 {
+    align-self: unset !important;
+    width: 203px !important;
+  }
+  
+  .daily-look-list-4 {
+    left: 380px !important;
+    position: absolute !important;
+    top: 0 !important;
+  }
+  
+  .daily-look-list-5 {
+    display: inline-flex !important;
+    width: unset !important;
+  }
+  
+  .daily-look-list-6 {
+    left: 0 !important;
+    position: absolute !important;
+    top: 0 !important;
+  }
+  
+  .group-5 {
+    height: 559px;
+    position: relative;
+    width: 1500px;
+  }
+  
+  .group-6 {
+    height: 748px;
+    position: relative;
+    width: 1500px;
+  }
+  
+  .frame-wrapper {
+    height: 48px;
+    left: 458px;
+    position: absolute;
+    top: 700px;
+    width: 496px;
+  }
+  
+  .frame-4 {
+    align-items: center;
+    display: inline-flex;
+    gap: 10px;
+    position: relative;
+  }
+  
+  .pagination-control-instance {
+    border: unset !important;
+    border-color: unset !important;
+    flex: 0 0 auto !important;
+  }
+  
+  .pagination-control-2 {
+    font-family: "Pretendard", Helvetica !important;
+    font-size: 24px !important;
+    font-style: unset !important;
+    font-weight: 400 !important;
+    letter-spacing: 0 !important;
+    line-height: 24px !important;
+  }
+  
+  .pagination-page-instance {
+    background-color: unset !important;
+    border: unset !important;
+    border-color: unset !important;
+    display: flex !important;
+    width: 42px !important;
+  }
+  
+  .pagination-page-2 {
+    color: #7b7b7b !important;
+    font-family: "Pretendard", Helvetica !important;
+    font-size: 24px !important;
+    font-style: unset !important;
+    font-weight: 400 !important;
+    letter-spacing: 0 !important;
+    line-height: 24px !important;
+    margin-left: -0.50px !important;
+    margin-right: -0.50px !important;
+  }
+  
+  .pagination-page-3 {
+    background-color: unset !important;
+    display: flex !important;
+    width: 42px !important;
+  }
+  
+  .pagination-page-4 {
+    color: #000008 !important;
+    font-family: "Pretendard", Helvetica !important;
+    font-size: 24px !important;
+    font-style: unset !important;
+    font-weight: 700 !important;
+    letter-spacing: 0 !important;
+    line-height: 24px !important;
+    margin-left: -2.50px !important;
+    margin-right: -2.50px !important;
+  }
+  
+  .pagination-page-5 {
+    color: #7b7b7b !important;
+    font-family: "Pretendard", Helvetica !important;
+    font-size: 24px !important;
+    font-style: unset !important;
+    font-weight: 400 !important;
+    letter-spacing: 0 !important;
+    line-height: 24px !important;
+    margin-left: -2.50px !important;
+    margin-right: -2.50px !important;
+  }
+  
+  .pagination-control-3 {
+    font-family: "Pretendard", Helvetica !important;
+    font-size: 24px !important;
+    font-style: unset !important;
+    font-weight: 400 !important;
+    letter-spacing: 0 !important;
+    line-height: 24px !important;
+    margin-left: -7.50px !important;
+  }
+  
+  .pagination-control-4 {
+    background-color: unset !important;
+    border: unset !important;
+    border-color: unset !important;
+    display: flex !important;
+    width: 96px !important;
+  }
+  
+  .group-7 {
+    height: 559px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 1500px;
+  }
+
+  .empty-message {
+    text-align: center;
+    font-family: "Pretendard", Helvetica;
+    font-size: 24px;
+    line-height: 24px;
+    letter-spacing: 0px;
+    margin-top: 150px;
+  }
+  

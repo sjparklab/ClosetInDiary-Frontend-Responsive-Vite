@@ -1,0 +1,1 @@
+export { TypePaperAirplane } from "./TypePaperAirplane";

@@ -1,0 +1,1 @@
+export { TypeInbox } from "./TypeInbox";

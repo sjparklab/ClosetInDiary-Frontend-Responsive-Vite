@@ -1,0 +1,1 @@
+export { TypeClipboardDocumentCheck } from "./TypeClipboardDocumentCheck";

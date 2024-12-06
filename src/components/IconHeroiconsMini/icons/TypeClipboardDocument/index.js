@@ -1,0 +1,1 @@
+export { TypeClipboardDocument } from "./TypeClipboardDocument";

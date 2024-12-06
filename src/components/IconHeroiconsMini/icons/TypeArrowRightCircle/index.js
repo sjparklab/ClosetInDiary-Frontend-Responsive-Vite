@@ -1,0 +1,1 @@
+export { TypeArrowRightCircle } from "./TypeArrowRightCircle";

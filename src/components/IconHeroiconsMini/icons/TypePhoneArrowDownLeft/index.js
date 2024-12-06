@@ -1,0 +1,1 @@
+export { TypePhoneArrowDownLeft } from "./TypePhoneArrowDownLeft";

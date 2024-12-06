@@ -1,0 +1,1 @@
+export { TypeBarsArrowUp } from "./TypeBarsArrowUp";

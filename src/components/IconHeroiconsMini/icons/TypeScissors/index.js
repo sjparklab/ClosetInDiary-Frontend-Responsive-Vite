@@ -1,0 +1,1 @@
+export { TypeScissors } from "./TypeScissors";

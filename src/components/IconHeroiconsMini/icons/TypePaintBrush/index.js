@@ -1,0 +1,1 @@
+export { TypePaintBrush } from "./TypePaintBrush";

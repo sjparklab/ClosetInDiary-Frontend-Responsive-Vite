@@ -1,0 +1,1 @@
+export { TypeArrowUpTray } from "./TypeArrowUpTray";

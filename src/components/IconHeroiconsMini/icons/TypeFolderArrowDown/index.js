@@ -1,0 +1,1 @@
+export { TypeFolderArrowDown } from "./TypeFolderArrowDown";

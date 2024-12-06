@@ -10,7 +10,7 @@ import Closet from './pages/Closet'
 import ClosetAddPage from './pages/ClosetAddPage'
 import Footer from './components/Footer'
 import MyProfile from './pages/MyProfile'
-
+import Diary from './pages/Diary'
 function App() {
   return (
     <Router>
@@ -30,6 +30,7 @@ function App() {
         <Route path="/closet" element={<Closet />} />
         <Route path="/closet/add-new" element={<ClosetAddPage />} />
         <Route path="/profile" element={<MyProfile />} />
+        <Route path="/diary" element={<Diary />} />
         <Route path="/diaryupload" element={<DiaryUpload />} />
       </Routes>
       </AuthProvider>

@@ -1,0 +1,1 @@
+export { TypeShoppingCart } from "./TypeShoppingCart";

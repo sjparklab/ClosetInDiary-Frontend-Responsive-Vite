@@ -1,0 +1,1 @@
+export { TypeChevronDoubleDown } from "./TypeChevronDoubleDown";

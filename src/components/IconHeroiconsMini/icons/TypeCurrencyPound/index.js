@@ -1,0 +1,1 @@
+export { TypeCurrencyPound } from "./TypeCurrencyPound";

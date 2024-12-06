@@ -1,0 +1,1 @@
+export { TypeDocument } from "./TypeDocument";

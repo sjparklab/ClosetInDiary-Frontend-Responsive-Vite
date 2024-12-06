@@ -1,0 +1,1 @@
+export { TypeMinusSmall } from "./TypeMinusSmall";

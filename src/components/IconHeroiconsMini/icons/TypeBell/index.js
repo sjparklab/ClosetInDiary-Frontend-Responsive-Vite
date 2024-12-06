@@ -1,0 +1,1 @@
+export { TypeBell } from "./TypeBell";

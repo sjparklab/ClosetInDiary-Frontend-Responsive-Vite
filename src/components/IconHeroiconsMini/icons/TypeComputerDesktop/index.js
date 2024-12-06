@@ -1,0 +1,1 @@
+export { TypeComputerDesktop } from "./TypeComputerDesktop";

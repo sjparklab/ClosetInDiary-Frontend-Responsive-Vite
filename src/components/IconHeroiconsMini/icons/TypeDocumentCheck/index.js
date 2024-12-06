@@ -1,0 +1,1 @@
+export { TypeDocumentCheck } from "./TypeDocumentCheck";

@@ -1,0 +1,1 @@
+export { TypeGift } from "./TypeGift";

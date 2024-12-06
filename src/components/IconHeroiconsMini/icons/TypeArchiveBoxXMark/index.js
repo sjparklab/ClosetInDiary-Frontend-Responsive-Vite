@@ -1,0 +1,1 @@
+export { TypeArchiveBoxXMark } from "./TypeArchiveBoxXMark";

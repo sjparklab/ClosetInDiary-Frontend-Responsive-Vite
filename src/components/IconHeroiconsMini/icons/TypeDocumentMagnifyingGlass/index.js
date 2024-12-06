@@ -1,0 +1,1 @@
+export { TypeDocumentMagnifyingGlass } from "./TypeDocumentMagnifyingGlass";

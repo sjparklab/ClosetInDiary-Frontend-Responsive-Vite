@@ -1,0 +1,1 @@
+export { TypeTruck } from "./TypeTruck";

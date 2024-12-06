@@ -1,0 +1,1 @@
+export { TypeUser } from "./TypeUser";

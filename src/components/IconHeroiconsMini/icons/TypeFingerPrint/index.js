@@ -1,0 +1,1 @@
+export { TypeFingerPrint } from "./TypeFingerPrint";

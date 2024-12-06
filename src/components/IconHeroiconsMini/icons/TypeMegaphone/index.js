@@ -1,0 +1,1 @@
+export { TypeMegaphone } from "./TypeMegaphone";

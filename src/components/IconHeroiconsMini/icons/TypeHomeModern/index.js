@@ -1,0 +1,1 @@
+export { TypeHomeModern } from "./TypeHomeModern";

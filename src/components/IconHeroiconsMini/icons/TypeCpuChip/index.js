@@ -1,0 +1,1 @@
+export { TypeCpuChip } from "./TypeCpuChip";

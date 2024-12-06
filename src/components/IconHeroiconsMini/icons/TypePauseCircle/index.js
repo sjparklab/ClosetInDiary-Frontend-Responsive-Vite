@@ -1,0 +1,1 @@
+export { TypePauseCircle } from "./TypePauseCircle";

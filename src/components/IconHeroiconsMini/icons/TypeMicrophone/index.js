@@ -1,0 +1,1 @@
+export { TypeMicrophone } from "./TypeMicrophone";

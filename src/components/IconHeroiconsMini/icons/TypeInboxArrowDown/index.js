@@ -1,0 +1,1 @@
+export { TypeInboxArrowDown } from "./TypeInboxArrowDown";

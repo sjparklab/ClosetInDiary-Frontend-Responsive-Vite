@@ -1,0 +1,202 @@
+.pagination-page {
+  align-items: center;
+  border-radius: 4px;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+}
+
+.pagination-page .element-2 {
+  margin-top: -1.00px;
+  position: relative;
+  white-space: nowrap;
+  width: fit-content;
+}
+
+.pagination-page.size-1-md {
+  padding: 8px 12px;
+}
+
+.pagination-page.state-active {
+  background-color: var(--colorsblack-0);
+  display: inline-flex;
+}
+
+.pagination-page.size-1-sm {
+  padding: 4px 8px;
+}
+
+.pagination-page.state-hover {
+  background-color: var(--colorsgrey-6);
+  border: 1px solid;
+  border-color: var(--colorsgrey-4-border);
+  display: inline-flex;
+}
+
+.pagination-page.state-more-hover {
+  background-color: var(--colorsgrey-6);
+  border: 1px solid;
+  border-color: var(--colorsgrey-4-border);
+  display: flex;
+}
+
+.pagination-page.state-default {
+  background-color: var(--colorswhite);
+  border: 1px solid;
+  border-color: var(--colorsgrey-4-border);
+  display: inline-flex;
+}
+
+.pagination-page.size-1-lg {
+  padding: 12px 16px;
+}
+
+.pagination-page.state-more {
+  background-color: var(--colorswhite);
+  border: 1px solid;
+  border-color: var(--colorsgrey-4-border);
+  display: flex;
+}
+
+.pagination-page.size-1-md.state-more {
+  height: 36px;
+  width: 31px;
+}
+
+.pagination-page.size-1-lg.state-more-hover {
+  height: 48px;
+  width: 40px;
+}
+
+.pagination-page.size-1-lg.state-more {
+  height: 48px;
+  width: 40px;
+}
+
+.pagination-page.state-more-hover.size-1-sm {
+  height: 24px;
+  width: 22px;
+}
+
+.pagination-page.state-more-hover.size-1-md {
+  height: 36px;
+  width: 31px;
+}
+
+.pagination-page.size-1-sm.state-more {
+  height: 24px;
+  width: 22px;
+}
+
+.pagination-page.state-active .element-2 {
+  color: var(--colorswhite);
+}
+
+.pagination-page.state-hover .element-2 {
+  color: var(--colorsblack-1-primary-text);
+}
+
+.pagination-page.state-more-hover .element-2 {
+  color: var(--colorsblack-1-primary-text);
+  font-family: var(--text-text-small-font-family);
+  font-size: var(--text-text-small-font-size);
+  font-style: var(--text-text-small-font-style);
+  font-weight: var(--text-text-small-font-weight);
+  letter-spacing: var(--text-text-small-letter-spacing);
+  line-height: var(--text-text-small-line-height);
+}
+
+.pagination-page.state-default .element-2 {
+  color: var(--colorsblack-1-primary-text);
+}
+
+.pagination-page.state-more .element-2 {
+  color: var(--colorsblack-1-primary-text);
+  font-family: var(--text-text-small-font-family);
+  font-size: var(--text-text-small-font-size);
+  font-style: var(--text-text-small-font-style);
+  font-weight: var(--text-text-small-font-weight);
+  letter-spacing: var(--text-text-small-letter-spacing);
+  line-height: var(--text-text-small-line-height);
+}
+
+.pagination-page.size-1-lg.state-default .element-2 {
+  font-family: var(--text-text-large-font-family);
+  font-size: var(--text-text-large-font-size);
+  font-style: var(--text-text-large-font-style);
+  font-weight: var(--text-text-large-font-weight);
+  letter-spacing: var(--text-text-large-letter-spacing);
+  line-height: var(--text-text-large-line-height);
+}
+
+.pagination-page.size-1-sm.state-default .element-2 {
+  font-family: var(--text-text-small-font-family);
+  font-size: var(--text-text-small-font-size);
+  font-style: var(--text-text-small-font-style);
+  font-weight: var(--text-text-small-font-weight);
+  letter-spacing: var(--text-text-small-letter-spacing);
+  line-height: var(--text-text-small-line-height);
+}
+
+.pagination-page.size-1-lg.state-active .element-2 {
+  font-family: var(--text-text-large-bold-font-family);
+  font-size: var(--text-text-large-bold-font-size);
+  font-style: var(--text-text-large-bold-font-style);
+  font-weight: var(--text-text-large-bold-font-weight);
+  letter-spacing: var(--text-text-large-bold-letter-spacing);
+  line-height: var(--text-text-large-bold-line-height);
+}
+
+.pagination-page.size-1-lg.state-hover .element-2 {
+  font-family: var(--text-text-large-font-family);
+  font-size: var(--text-text-large-font-size);
+  font-style: var(--text-text-large-font-style);
+  font-weight: var(--text-text-large-font-weight);
+  letter-spacing: var(--text-text-large-letter-spacing);
+  line-height: var(--text-text-large-line-height);
+}
+
+.pagination-page.size-1-md.state-active .element-2 {
+  font-family: var(--text-text-base-bold-font-family);
+  font-size: var(--text-text-base-bold-font-size);
+  font-style: var(--text-text-base-bold-font-style);
+  font-weight: var(--text-text-base-bold-font-weight);
+  letter-spacing: var(--text-text-base-bold-letter-spacing);
+  line-height: var(--text-text-base-bold-line-height);
+}
+
+.pagination-page.state-default.size-1-md .element-2 {
+  font-family: var(--text-text-base-font-family);
+  font-size: var(--text-text-base-font-size);
+  font-style: var(--text-text-base-font-style);
+  font-weight: var(--text-text-base-font-weight);
+  letter-spacing: var(--text-text-base-letter-spacing);
+  line-height: var(--text-text-base-line-height);
+}
+
+.pagination-page.state-hover.size-1-md .element-2 {
+  font-family: var(--text-text-base-font-family);
+  font-size: var(--text-text-base-font-size);
+  font-style: var(--text-text-base-font-style);
+  font-weight: var(--text-text-base-font-weight);
+  letter-spacing: var(--text-text-base-letter-spacing);
+  line-height: var(--text-text-base-line-height);
+}
+
+.pagination-page.size-1-sm.state-active .element-2 {
+  font-family: var(--text-text-small-bold-font-family);
+  font-size: var(--text-text-small-bold-font-size);
+  font-style: var(--text-text-small-bold-font-style);
+  font-weight: var(--text-text-small-bold-font-weight);
+  letter-spacing: var(--text-text-small-bold-letter-spacing);
+  line-height: var(--text-text-small-bold-line-height);
+}
+
+.pagination-page.state-hover.size-1-sm .element-2 {
+  font-family: var(--text-text-small-font-family);
+  font-size: var(--text-text-small-font-size);
+  font-style: var(--text-text-small-font-style);
+  font-weight: var(--text-text-small-font-weight);
+  letter-spacing: var(--text-text-small-letter-spacing);
+  line-height: var(--text-text-small-line-height);
+}

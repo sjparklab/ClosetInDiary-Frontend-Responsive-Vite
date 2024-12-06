@@ -1,0 +1,1 @@
+export { TypeDocumentDuplicate } from "./TypeDocumentDuplicate";

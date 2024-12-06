@@ -1,0 +1,1 @@
+export { TypeHandThumbUp } from "./TypeHandThumbUp";

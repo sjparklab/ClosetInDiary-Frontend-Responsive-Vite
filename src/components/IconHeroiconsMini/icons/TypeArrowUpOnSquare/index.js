@@ -1,0 +1,1 @@
+export { TypeArrowUpOnSquare } from "./TypeArrowUpOnSquare";

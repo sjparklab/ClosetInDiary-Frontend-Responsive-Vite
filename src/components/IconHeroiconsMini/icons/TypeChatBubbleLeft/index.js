@@ -1,0 +1,1 @@
+export { TypeChatBubbleLeft } from "./TypeChatBubbleLeft";

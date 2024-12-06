@@ -1,0 +1,1 @@
+export { TypeCurrencyDollar } from "./TypeCurrencyDollar";

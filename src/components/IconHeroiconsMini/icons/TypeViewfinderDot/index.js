@@ -1,0 +1,1 @@
+export { TypeViewfinderDot } from "./TypeViewfinderDot";

@@ -1,0 +1,1 @@
+export { TypeMusicalNote } from "./TypeMusicalNote";

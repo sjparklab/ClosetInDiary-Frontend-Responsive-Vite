@@ -1,0 +1,1 @@
+export { TypeGlobeAlt } from "./TypeGlobeAlt";

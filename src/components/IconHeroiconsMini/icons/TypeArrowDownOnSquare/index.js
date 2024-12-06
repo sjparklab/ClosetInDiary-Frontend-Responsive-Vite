@@ -1,0 +1,1 @@
+export { TypeArrowDownOnSquare } from "./TypeArrowDownOnSquare";

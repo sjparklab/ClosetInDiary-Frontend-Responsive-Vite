@@ -1,0 +1,1 @@
+export { TypeTableCells } from "./TypeTableCells";

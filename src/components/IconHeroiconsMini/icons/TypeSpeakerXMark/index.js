@@ -1,0 +1,1 @@
+export { TypeSpeakerXMark } from "./TypeSpeakerXMark";

@@ -1,0 +1,1 @@
+export { TypeTv } from "./TypeTv";

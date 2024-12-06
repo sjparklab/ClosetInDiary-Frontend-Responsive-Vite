@@ -1,0 +1,1 @@
+export { TypeCalendarDays } from "./TypeCalendarDays";

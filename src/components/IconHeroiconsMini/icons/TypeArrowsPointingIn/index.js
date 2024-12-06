@@ -1,0 +1,1 @@
+export { TypeArrowsPointingIn } from "./TypeArrowsPointingIn";

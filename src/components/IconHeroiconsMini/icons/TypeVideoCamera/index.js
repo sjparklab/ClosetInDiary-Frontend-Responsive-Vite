@@ -1,0 +1,1 @@
+export { TypeVideoCamera } from "./TypeVideoCamera";

@@ -1,0 +1,1 @@
+export { TypeEllipsisVertical } from "./TypeEllipsisVertical";

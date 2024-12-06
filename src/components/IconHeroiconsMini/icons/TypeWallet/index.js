@@ -1,0 +1,1 @@
+export { TypeWallet } from "./TypeWallet";

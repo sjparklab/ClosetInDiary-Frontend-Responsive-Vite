@@ -1,0 +1,1 @@
+export { TypePower } from "./TypePower";

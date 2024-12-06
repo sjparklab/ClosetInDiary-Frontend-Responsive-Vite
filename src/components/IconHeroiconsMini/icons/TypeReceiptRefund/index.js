@@ -1,0 +1,1 @@
+export { TypeReceiptRefund } from "./TypeReceiptRefund";

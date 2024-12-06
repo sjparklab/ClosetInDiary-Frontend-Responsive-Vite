@@ -1,0 +1,1 @@
+export { TypeNewspaper } from "./TypeNewspaper";

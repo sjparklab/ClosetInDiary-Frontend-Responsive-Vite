@@ -1,0 +1,1 @@
+export { TypePuzzlePiece } from "./TypePuzzlePiece";

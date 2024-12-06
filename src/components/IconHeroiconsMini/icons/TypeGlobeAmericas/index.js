@@ -1,0 +1,1 @@
+export { TypeGlobeAmericas } from "./TypeGlobeAmericas";

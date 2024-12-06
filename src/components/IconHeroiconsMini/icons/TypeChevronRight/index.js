@@ -1,0 +1,1 @@
+export { TypeChevronRight } from "./TypeChevronRight";

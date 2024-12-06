@@ -1,0 +1,1 @@
+export { TypeGlobeAsiaAustralia } from "./TypeGlobeAsiaAustralia";

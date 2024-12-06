@@ -1,0 +1,1 @@
+export { TypeCog } from "./TypeCog";

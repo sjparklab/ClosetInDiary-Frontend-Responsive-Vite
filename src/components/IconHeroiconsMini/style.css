@@ -1,0 +1,2066 @@
+.icon-heroicons-mini.div {
+  height: 20px;
+  position: relative;
+  width: 20px;
+}
+
+.icon-heroicons-mini .union {
+  position: absolute;
+}
+
+.icon-heroicons-mini.instance-node {
+  height: 20px !important;
+  left: 0 !important;
+  position: absolute !important;
+  top: 0 !important;
+  width: 20px !important;
+}
+
+.icon-heroicons-mini.adjustments-vertical {
+  background-image: url(../../../static/img/heroicons-mini-adjustments-vertical.png);
+  background-size: 100% 100%;
+}
+
+.div.cake .union {
+  height: 16px;
+  left: 2px;
+  top: 2px;
+  width: 16px;
+}
+
+.div.presentation-chart-line .union {
+  height: 16px;
+  left: 2px;
+  top: 2px;
+  width: 16px;
+}
+
+.div.globe-asia-australia .union {
+  height: 16px;
+  left: 2px;
+  top: 2px;
+  width: 16px;
+}
+
+.div.variable .union {
+  height: 16px;
+  left: 2px;
+  top: 2px;
+  width: 16px;
+}
+
+.div.chevron-up .union {
+  height: 16px;
+  left: 2px;
+  top: 2px;
+  width: 16px;
+}
+
+.div.arrow-left .union {
+  height: 16px;
+  left: 2px;
+  top: 2px;
+  width: 16px;
+}
+
+.div.key .union {
+  height: 16px;
+  left: 2px;
+  top: 2px;
+  width: 16px;
+}
+
+.div.clock .union {
+  height: 16px;
+  left: 2px;
+  top: 2px;
+  width: 16px;
+}
+
+.div.currency-bangladeshi .union {
+  height: 16px;
+  left: 2px;
+  top: 2px;
+  width: 16px;
+}
+
+.div.window .union {
+  height: 16px;
+  left: 2px;
+  top: 2px;
+  width: 16px;
+}
+
+.div.circle-stack .union {
+  height: 18px;
+  left: 3px;
+  top: 1px;
+  width: 14px;
+}
+
+.div.signal-slash .union {
+  height: 16px;
+  left: 2px;
+  top: 2px;
+  width: 16px;
+}
+
+.div.calculator .union {
+  height: 16px;
+  left: 2px;
+  top: 2px;
+  width: 16px;
+}
+
+.div.chat-bubble-bottom-center .union {
+  height: 16px;
+  left: 2px;
+  top: 2px;
+  width: 16px;
+}
+
+.div.clipboard .union {
+  height: 16px;
+  left: 2px;
+  top: 2px;
+  width: 16px;
+}
+
+.div.arrow-up-on-square-stack .union {
+  height: 18px;
+  left: 3px;
+  top: 1px;
+  width: 14px;
+}
+
+.div.document-magnifying-glass .union {
+  height: 16px;
+  left: 2px;
+  top: 2px;
+  width: 16px;
+}
+
+.div.arrow-up .union {
+  height: 16px;
+  left: 2px;
+  top: 2px;
+  width: 16px;
+}
+
+.div.pencil-square .union {
+  height: 16px;
+  left: 2px;
+  top: 2px;
+  width: 16px;
+}
+
+.div.square-3-stack-3d .union {
+  height: 16px;
+  left: 2px;
+  top: 2px;
+  width: 16px;
+}
+
+.div.face-smile .union {
+  height: 16px;
+  left: 2px;
+  top: 2px;
+  width: 16px;
+}
+
+.div.cpu-chip .union {
+  height: 16px;
+  left: 2px;
+  top: 2px;
+  width: 16px;
+}
+
+.div.calendar-days .union {
+  height: 16px;
+  left: 2px;
+  top: 2px;
+  width: 16px;
+}
+
+.div.banknotes .union {
+  height: 15px;
+  left: 1px;
+  top: 3px;
+  width: 18px;
+}
+
+.div.code-bracket .union {
+  height: 16px;
+  left: 2px;
+  top: 2px;
+  width: 16px;
+}
+
+.div.arrow-right-on-rectangle .union {
+  height: 16px;
+  left: 2px;
+  top: 2px;
+  width: 16px;
+}
+
+.div.rss .union {
+  height: 16px;
+  left: 2px;
+  top: 2px;
+  width: 16px;
+}
+
+.div.arrow-right-circle .union {
+  height: 16px;
+  left: 2px;
+  top: 2px;
+  width: 16px;
+}
+
+.div.chart-bar .union {
+  height: 16px;
+  left: 2px;
+  top: 2px;
+  width: 16px;
+}
+
+.div.inbox-stack .union {
+  height: 16px;
+  left: 2px;
+  top: 2px;
+  width: 16px;
+}
+
+.div.bell-alert .union {
+  height: 16px;
+  left: 2px;
+  top: 2px;
+  width: 16px;
+}
+
+.div.arrow-left-circle .union {
+  height: 16px;
+  left: 2px;
+  top: 2px;
+  width: 16px;
+}
+
+.div.shield-exclamation .union {
+  height: 16px;
+  left: 2px;
+  top: 2px;
+  width: 16px;
+}
+
+.div.calendar .union {
+  height: 16px;
+  left: 2px;
+  top: 2px;
+  width: 16px;
+}
+
+.div.chevron-down .union {
+  height: 16px;
+  left: 2px;
+  top: 2px;
+  width: 16px;
+}
+
+.div.bars-arrow-up .union {
+  height: 16px;
+  left: 2px;
+  top: 2px;
+  width: 16px;
+}
+
+.div.users .union {
+  height: 16px;
+  left: 2px;
+  top: 2px;
+  width: 16px;
+}
+
+.div.camera .union {
+  height: 14px;
+  left: 1px;
+  top: 3px;
+  width: 18px;
+}
+
+.div.arrows-pointing-out .union {
+  height: 16px;
+  left: 2px;
+  top: 2px;
+  width: 16px;
+}
+
+.div.arrow-down-on-square .union {
+  height: 16px;
+  left: 2px;
+  top: 2px;
+  width: 16px;
+}
+
+.div.cog-8-tooth .union {
+  height: 16px;
+  left: 2px;
+  top: 2px;
+  width: 16px;
+}
+
+.div.chart-pie .union {
+  height: 16px;
+  left: 2px;
+  top: 2px;
+  width: 16px;
+}
+
+.div.arrow-down-right .union {
+  height: 16px;
+  left: 2px;
+  top: 2px;
+  width: 16px;
+}
+
+.div.arrow-down-tray .union {
+  height: 16px;
+  left: 2px;
+  top: 2px;
+  width: 16px;
+}
+
+.div.wrench-screwdriver .union {
+  height: 16px;
+  left: 2px;
+  top: 2px;
+  width: 16px;
+}
+
+.div.square-2-stack .union {
+  height: 16px;
+  left: 2px;
+  top: 2px;
+  width: 16px;
+}
+
+.div.sun .union {
+  height: 16px;
+  left: 2px;
+  top: 2px;
+  width: 16px;
+}
+
+.div.cursor-arrow-ripple .union {
+  height: 16px;
+  left: 2px;
+  top: 2px;
+  width: 16px;
+}
+
+.div.clipboard-document-list .union {
+  height: 16px;
+  left: 2px;
+  top: 2px;
+  width: 16px;
+}
+
+.div.currency-euro .union {
+  height: 16px;
+  left: 2px;
+  top: 2px;
+  width: 16px;
+}
+
+.div.chevron-up-down .union {
+  height: 16px;
+  left: 2px;
+  top: 2px;
+  width: 16px;
+}
+
+.div.bookmark-slash .union {
+  height: 16px;
+  left: 2px;
+  top: 2px;
+  width: 16px;
+}
+
+.div.speaker-x-mark .union {
+  height: 16px;
+  left: 2px;
+  top: 2px;
+  width: 16px;
+}
+
+.div.hand-raised .union {
+  height: 18px;
+  left: 3px;
+  top: 1px;
+  width: 14px;
+}
+
+.div.building-storefront .union {
+  height: 16px;
+  left: 2px;
+  top: 2px;
+  width: 16px;
+}
+
+.div.stop .union {
+  height: 16px;
+  left: 2px;
+  top: 2px;
+  width: 16px;
+}
+
+.div.lock-open .union {
+  height: 18px;
+  left: 1px;
+  top: 1px;
+  width: 18px;
+}
+
+.div.battery-0 .union {
+  height: 16px;
+  left: 2px;
+  top: 2px;
+  width: 16px;
+}
+
+.div.pause .union {
+  height: 16px;
+  left: 2px;
+  top: 2px;
+  width: 16px;
+}
+
+.div.printer .union {
+  height: 16px;
+  left: 2px;
+  top: 2px;
+  width: 16px;
+}
+
+.div.identification .union {
+  height: 16px;
+  left: 2px;
+  top: 2px;
+  width: 16px;
+}
+
+.div.folder-open .union {
+  height: 16px;
+  left: 2px;
+  top: 2px;
+  width: 16px;
+}
+
+.div.command-line .union {
+  height: 16px;
+  left: 2px;
+  top: 2px;
+  width: 16px;
+}
+
+.div.arrow-long-up .union {
+  height: 16px;
+  left: 2px;
+  top: 2px;
+  width: 16px;
+}
+
+.div.credit-card .union {
+  height: 12px;
+  left: 1px;
+  top: 4px;
+  width: 18px;
+}
+
+.div.at-symbol .union {
+  height: 16px;
+  left: 2px;
+  top: 2px;
+  width: 16px;
+}
+
+.div.plus-small .union {
+  height: 16px;
+  left: 2px;
+  top: 2px;
+  width: 16px;
+}
+
+.div.chevron-double-left .union {
+  height: 16px;
+  left: 2px;
+  top: 2px;
+  width: 16px;
+}
+
+.div.magnifying-glass .union {
+  height: 16px;
+  left: 2px;
+  top: 2px;
+  width: 16px;
+}
+
+.div.user-circle .union {
+  height: 16px;
+  left: 2px;
+  top: 2px;
+  width: 16px;
+}
+
+.div.check .union {
+  height: 16px;
+  left: 2px;
+  top: 2px;
+  width: 16px;
+}
+
+.div.magnifying-glass-minus .union {
+  height: 16px;
+  left: 2px;
+  top: 2px;
+  width: 16px;
+}
+
+.div.globe-americas .union {
+  height: 16px;
+  left: 2px;
+  top: 2px;
+  width: 16px;
+}
+
+.div.eye-slash .union {
+  height: 16px;
+  left: 2px;
+  top: 2px;
+  width: 16px;
+}
+
+.div.forward .union {
+  height: 16px;
+  left: 2px;
+  top: 2px;
+  width: 16px;
+}
+
+.div.folder-arrow-down .union {
+  height: 16px;
+  left: 2px;
+  top: 2px;
+  width: 16px;
+}
+
+.div.play .union {
+  height: 16px;
+  left: 2px;
+  top: 2px;
+  width: 16px;
+}
+
+.div.currency-dollar .union {
+  height: 16px;
+  left: 2px;
+  top: 2px;
+  width: 16px;
+}
+
+.div.hand-thumb-up .union {
+  height: 16px;
+  left: 2px;
+  top: 2px;
+  width: 16px;
+}
+
+.div.minus-small .union {
+  height: 16px;
+  left: 2px;
+  top: 2px;
+  width: 16px;
+}
+
+.div.server-stack .union {
+  height: 16px;
+  left: 2px;
+  top: 2px;
+  width: 16px;
+}
+
+.div.user .union {
+  height: 16px;
+  left: 2px;
+  top: 2px;
+  width: 16px;
+}
+
+.div.adjustments-vertical .union {
+  height: 16px;
+  left: 2px;
+  top: 2px;
+  width: 16px;
+}
+
+.div.sparkles .union {
+  height: 16px;
+  left: 2px;
+  top: 2px;
+  width: 16px;
+}
+
+.div.chevron-double-down .union {
+  height: 16px;
+  left: 2px;
+  top: 2px;
+  width: 16px;
+}
+
+.div.minus-circle .union {
+  height: 16px;
+  left: 2px;
+  top: 2px;
+  width: 16px;
+}
+
+.div.arrow-long-left .union {
+  height: 16px;
+  left: 2px;
+  top: 2px;
+  width: 16px;
+}
+
+.div.receipt-percent .union {
+  height: 16px;
+  left: 2px;
+  top: 2px;
+  width: 16px;
+}
+
+.div.inbox-arrow-down .union {
+  height: 16px;
+  left: 2px;
+  top: 2px;
+  width: 16px;
+}
+
+.div.battery-100 .union {
+  height: 16px;
+  left: 2px;
+  top: 2px;
+  width: 16px;
+}
+
+.div.bars-3-center-left .union {
+  height: 16px;
+  left: 2px;
+  top: 2px;
+  width: 16px;
+}
+
+.div.minus .union {
+  height: 16px;
+  left: 2px;
+  top: 2px;
+  width: 16px;
+}
+
+.div.document-duplicate .union {
+  height: 16px;
+  left: 2px;
+  top: 2px;
+  width: 16px;
+}
+
+.div.folder-plus .union {
+  height: 14px;
+  left: 2px;
+  top: 3px;
+  width: 16px;
+}
+
+.div.light-bulb .union {
+  height: 16px;
+  left: 2px;
+  top: 2px;
+  width: 16px;
+}
+
+.div.arrow-path-rounded-square .union {
+  height: 16px;
+  left: 2px;
+  top: 2px;
+  width: 16px;
+}
+
+.div.chat-bubble-oval-left .union {
+  height: 16px;
+  left: 2px;
+  top: 2px;
+  width: 16px;
+}
+
+.div.document-check .union {
+  height: 16px;
+  left: 2px;
+  top: 2px;
+  width: 16px;
+}
+
+.div.presentation-chart-bar .union {
+  height: 17px;
+  left: 1px;
+  top: 2px;
+  width: 18px;
+}
+
+.div.exclaimation-circle .union {
+  height: 16px;
+  left: 2px;
+  top: 2px;
+  width: 16px;
+}
+
+.div.gift-top .union {
+  height: 14px;
+  left: 2px;
+  top: 3px;
+  width: 16px;
+}
+
+.div.arrow-small-down .union {
+  height: 16px;
+  left: 2px;
+  top: 2px;
+  width: 16px;
+}
+
+.div.shopping-bag .union {
+  height: 18px;
+  left: 2px;
+  top: 1px;
+  width: 16px;
+}
+
+.div.face-frown .union {
+  height: 16px;
+  left: 2px;
+  top: 2px;
+  width: 16px;
+}
+
+.div.arrow-uturn-up .union {
+  height: 16px;
+  left: 2px;
+  top: 2px;
+  width: 16px;
+}
+
+.div.document-chart-bar .union {
+  height: 16px;
+  left: 2px;
+  top: 2px;
+  width: 16px;
+}
+
+.div.cloud .union {
+  height: 16px;
+  left: 2px;
+  top: 2px;
+  width: 16px;
+}
+
+.div.scale .union {
+  height: 16px;
+  left: 2px;
+  top: 2px;
+  width: 16px;
+}
+
+.div.truck .union {
+  height: 16px;
+  left: 2px;
+  top: 2px;
+  width: 16px;
+}
+
+.div.magnifying-glass-plus .union {
+  height: 16px;
+  left: 2px;
+  top: 2px;
+  width: 16px;
+}
+
+.div.chat-bubble-left .union {
+  height: 16px;
+  left: 2px;
+  top: 2px;
+  width: 16px;
+}
+
+.div.arrow-trending-down .union {
+  height: 16px;
+  left: 2px;
+  top: 2px;
+  width: 16px;
+}
+
+.div.home-modern .union {
+  height: 16px;
+  left: 2px;
+  top: 2px;
+  width: 16px;
+}
+
+.div.user-group .union {
+  height: 16px;
+  left: 2px;
+  top: 2px;
+  width: 16px;
+}
+
+.div.arrow-top-right-on-square .union {
+  height: 16px;
+  left: 2px;
+  top: 2px;
+  width: 16px;
+}
+
+.div.chevron-right .union {
+  height: 16px;
+  left: 2px;
+  top: 2px;
+  width: 16px;
+}
+
+.div.inbox .union {
+  height: 16px;
+  left: 2px;
+  top: 2px;
+  width: 16px;
+}
+
+.div.arrow-up-right .union {
+  height: 16px;
+  left: 2px;
+  top: 2px;
+  width: 16px;
+}
+
+.div.rectangle-group .union {
+  height: 14px;
+  left: 1px;
+  top: 3px;
+  width: 18px;
+}
+
+.div.chat-bubble-bottom-center-text .union {
+  height: 16px;
+  left: 2px;
+  top: 2px;
+  width: 16px;
+}
+
+.div.tv .union {
+  height: 16px;
+  left: 2px;
+  top: 2px;
+  width: 16px;
+}
+
+.div.arrow-uturn-left .union {
+  height: 16px;
+  left: 2px;
+  top: 2px;
+  width: 16px;
+}
+
+.div.play-pause .union {
+  height: 16px;
+  left: 2px;
+  top: 2px;
+  width: 16px;
+}
+
+.div.shield-check .union {
+  height: 16px;
+  left: 2px;
+  top: 2px;
+  width: 16px;
+}
+
+.div.cog-6-tooth .union {
+  height: 16px;
+  left: 2px;
+  top: 2px;
+  width: 16px;
+}
+
+.div.queue-list .union {
+  height: 16px;
+  left: 2px;
+  top: 2px;
+  width: 16px;
+}
+
+.div.eye-dropper .union {
+  height: 16px;
+  left: 2px;
+  top: 2px;
+  width: 16px;
+}
+
+.div.language .union {
+  height: 16px;
+  left: 2px;
+  top: 2px;
+  width: 16px;
+}
+
+.div.cloud-arrow-down .union {
+  height: 16px;
+  left: 2px;
+  top: 2px;
+  width: 16px;
+}
+
+.div.radio .union {
+  height: 16px;
+  left: 2px;
+  top: 2px;
+  width: 16px;
+}
+
+.div.document-arrow-down .union {
+  height: 16px;
+  left: 2px;
+  top: 2px;
+  width: 16px;
+}
+
+.div.hand-thumb-down .union {
+  height: 16px;
+  left: 2px;
+  top: 2px;
+  width: 16px;
+}
+
+.div.bookmark-square .union {
+  height: 16px;
+  left: 2px;
+  top: 2px;
+  width: 16px;
+}
+
+.div.gif .union {
+  height: 16px;
+  left: 2px;
+  top: 2px;
+  width: 16px;
+}
+
+.div.code-bracket-square .union {
+  height: 16px;
+  left: 2px;
+  top: 2px;
+  width: 16px;
+}
+
+.div.wallet .union {
+  height: 16px;
+  left: 2px;
+  top: 2px;
+  width: 16px;
+}
+
+.div.arrow-path .union {
+  height: 16px;
+  left: 2px;
+  top: 2px;
+  width: 16px;
+}
+
+.div.plus-circle .union {
+  height: 16px;
+  left: 2px;
+  top: 2px;
+  width: 16px;
+}
+
+.div.star .union {
+  height: 16px;
+  left: 2px;
+  top: 2px;
+  width: 17px;
+}
+
+.div.device-phone-mobile .union {
+  height: 16px;
+  left: 2px;
+  top: 2px;
+  width: 16px;
+}
+
+.div.speaker-wave .union {
+  height: 16px;
+  left: 2px;
+  top: 2px;
+  width: 16px;
+}
+
+.div.question-mark-circle .union {
+  height: 16px;
+  left: 2px;
+  top: 2px;
+  width: 16px;
+}
+
+.div.x-mark .union {
+  height: 16px;
+  left: 2px;
+  top: 2px;
+  width: 16px;
+}
+
+.div.no-symbol .union {
+  height: 16px;
+  left: 2px;
+  top: 2px;
+  width: 16px;
+}
+
+.div.device-tablet .union {
+  height: 18px;
+  left: 2px;
+  top: 1px;
+  width: 16px;
+}
+
+.div.folder-minus .union {
+  height: 14px;
+  left: 2px;
+  top: 3px;
+  width: 16px;
+}
+
+.div.bell-slash .union {
+  height: 16px;
+  left: 2px;
+  top: 2px;
+  width: 16px;
+}
+
+.div.clipboard-document-check .union {
+  height: 16px;
+  left: 2px;
+  top: 2px;
+  width: 16px;
+}
+
+.div.server .union {
+  height: 16px;
+  left: 2px;
+  top: 2px;
+  width: 16px;
+}
+
+.div.cube .union {
+  height: 18px;
+  left: 2px;
+  top: 1px;
+  width: 16px;
+}
+
+.div.globe-alt .union {
+  height: 16px;
+  left: 2px;
+  top: 2px;
+  width: 16px;
+}
+
+.div.stop-circle .union {
+  height: 16px;
+  left: 2px;
+  top: 2px;
+  width: 16px;
+}
+
+.div.arrow-down-circle .union {
+  height: 16px;
+  left: 2px;
+  top: 2px;
+  width: 16px;
+}
+
+.div.paper-airplane .union {
+  height: 16px;
+  left: 2px;
+  top: 2px;
+  width: 16px;
+}
+
+.div.backward .union {
+  height: 16px;
+  left: 2px;
+  top: 2px;
+  width: 16px;
+}
+
+.div.battery-50 .union {
+  height: 16px;
+  left: 2px;
+  top: 2px;
+  width: 16px;
+}
+
+.div.bars-3-bottom-right .union {
+  height: 16px;
+  left: 2px;
+  top: 2px;
+  width: 16px;
+}
+
+.div.shopping-cart .union {
+  height: 16px;
+  left: 2px;
+  top: 2px;
+  width: 16px;
+}
+
+.div.phone-arrow-down-left .union {
+  height: 16px;
+  left: 2px;
+  top: 2px;
+  width: 16px;
+}
+
+.div.arrow-uturn-down .union {
+  height: 16px;
+  left: 2px;
+  top: 2px;
+  width: 16px;
+}
+
+.div.wrench .union {
+  height: 16px;
+  left: 2px;
+  top: 2px;
+  width: 16px;
+}
+
+.div.academic-cap .union {
+  height: 17px;
+  left: 1px;
+  top: 1px;
+  width: 18px;
+}
+
+.div.paint-brush .union {
+  height: 16px;
+  left: 2px;
+  top: 2px;
+  width: 16px;
+}
+
+.div.document-arrow-up .union {
+  height: 16px;
+  left: 2px;
+  top: 2px;
+  width: 16px;
+}
+
+.div.qr-code .union {
+  height: 16px;
+  left: 2px;
+  top: 2px;
+  width: 16px;
+}
+
+.div.gift .union {
+  height: 16px;
+  left: 2px;
+  top: 2px;
+  width: 16px;
+}
+
+.div.cloud-arrow-up .union {
+  height: 14px;
+  left: 1px;
+  top: 3px;
+  width: 18px;
+}
+
+.div.document-plus .union {
+  height: 16px;
+  left: 2px;
+  top: 2px;
+  width: 16px;
+}
+
+.div.rectangle-stack .union {
+  height: 16px;
+  left: 2px;
+  top: 2px;
+  width: 16px;
+}
+
+.div.document-minus .union {
+  height: 16px;
+  left: 2px;
+  top: 2px;
+  width: 16px;
+}
+
+.div.bug-ant .union {
+  height: 16px;
+  left: 2px;
+  top: 2px;
+  width: 16px;
+}
+
+.div.magnifying-glass-circle .union {
+  height: 16px;
+  left: 2px;
+  top: 2px;
+  width: 16px;
+}
+
+.div.video-camera-slash .union {
+  height: 16px;
+  left: 2px;
+  top: 2px;
+  width: 16px;
+}
+
+.div.archive-box .union {
+  height: 16px;
+  left: 2px;
+  top: 2px;
+  width: 16px;
+}
+
+.div.briefcase .union {
+  height: 16px;
+  left: 2px;
+  top: 2px;
+  width: 16px;
+}
+
+.div.signal .union {
+  height: 16px;
+  left: 2px;
+  top: 2px;
+  width: 16px;
+}
+
+.div.viewfinder-dot .union {
+  height: 16px;
+  left: 2px;
+  top: 2px;
+  width: 16px;
+}
+
+.div.archive-box-x-mark .union {
+  height: 16px;
+  left: 2px;
+  top: 2px;
+  width: 16px;
+}
+
+.div.list-bullet .union {
+  height: 16px;
+  left: 2px;
+  top: 2px;
+  width: 16px;
+}
+
+.div.building-library .union {
+  height: 16px;
+  left: 2px;
+  top: 2px;
+  width: 16px;
+}
+
+.div.chat-bubble-left-right .union {
+  height: 16px;
+  left: 2px;
+  top: 2px;
+  width: 16px;
+}
+
+.div.backspace .union {
+  height: 16px;
+  left: 2px;
+  top: 2px;
+  width: 16px;
+}
+
+.div.arrow-small-right .union {
+  height: 16px;
+  left: 2px;
+  top: 2px;
+  width: 16px;
+}
+
+.div.trash .union {
+  height: 18px;
+  left: 3px;
+  top: 1px;
+  width: 14px;
+}
+
+.div.archive-box-arrow-down .union {
+  height: 14px;
+  left: 1px;
+  top: 3px;
+  width: 18px;
+}
+
+.div.bars-2 .union {
+  height: 16px;
+  left: 2px;
+  top: 2px;
+  width: 16px;
+}
+
+.div.receipt-refund .union {
+  height: 16px;
+  left: 2px;
+  top: 2px;
+  width: 16px;
+}
+
+.div.bars-4 .union {
+  height: 16px;
+  left: 2px;
+  top: 2px;
+  width: 16px;
+}
+
+.div.document .union {
+  height: 16px;
+  left: 2px;
+  top: 2px;
+  width: 16px;
+}
+
+.div.bell .union {
+  height: 16px;
+  left: 2px;
+  top: 2px;
+  width: 16px;
+}
+
+.div.plus .union {
+  height: 16px;
+  left: 2px;
+  top: 2px;
+  width: 16px;
+}
+
+.div.microphone .union {
+  height: 16px;
+  left: 2px;
+  top: 2px;
+  width: 16px;
+}
+
+.div.lock-closed .union {
+  height: 18px;
+  left: 3px;
+  top: 1px;
+  width: 14px;
+}
+
+.div.hashtag .union {
+  height: 16px;
+  left: 3px;
+  top: 2px;
+  width: 15px;
+}
+
+.div.envelope .union {
+  height: 16px;
+  left: 2px;
+  top: 2px;
+  width: 16px;
+}
+
+.div.phone .union {
+  height: 16px;
+  left: 2px;
+  top: 2px;
+  width: 16px;
+}
+
+.div.lifebuoy .union {
+  height: 16px;
+  left: 2px;
+  top: 2px;
+  width: 16px;
+}
+
+.div.arrows-pointing-in .union {
+  height: 16px;
+  left: 2px;
+  top: 2px;
+  width: 16px;
+}
+
+.div.globe-europe-africa .union {
+  height: 16px;
+  left: 2px;
+  top: 2px;
+  width: 16px;
+}
+
+.div.cursor-arrow-rays .union {
+  height: 18px;
+  left: 3px;
+  top: 1px;
+  width: 14px;
+}
+
+.div.arrow-uturn-right .union {
+  height: 16px;
+  left: 2px;
+  top: 2px;
+  width: 16px;
+}
+
+.div.chat-bubble-oval-left-ellipsis .union {
+  height: 15px;
+  left: 2px;
+  top: 3px;
+  width: 16px;
+}
+
+.div.bars-3 .union {
+  height: 16px;
+  left: 2px;
+  top: 2px;
+  width: 16px;
+}
+
+.div.x-circle .union {
+  height: 16px;
+  left: 2px;
+  top: 2px;
+  width: 16px;
+}
+
+.div.ticket .union {
+  height: 16px;
+  left: 2px;
+  top: 2px;
+  width: 16px;
+}
+
+.div.adjustments-horizontal .union {
+  height: 16px;
+  left: 2px;
+  top: 2px;
+  width: 16px;
+}
+
+.div.chart-bar-square .union {
+  height: 16px;
+  left: 2px;
+  top: 2px;
+  width: 16px;
+}
+
+.div.heart .union {
+  height: 16px;
+  left: 2px;
+  top: 2px;
+  width: 16px;
+}
+
+.div.phone-x-mark .union {
+  height: 16px;
+  left: 2px;
+  top: 2px;
+  width: 16px;
+}
+
+.div.currency-yen .union {
+  height: 16px;
+  left: 2px;
+  top: 2px;
+  width: 16px;
+}
+
+.div.arrow-down .union {
+  height: 16px;
+  left: 2px;
+  top: 2px;
+  width: 16px;
+}
+
+.div.megaphone .union {
+  height: 16px;
+  left: 2px;
+  top: 2px;
+  width: 16px;
+}
+
+.div.link .union {
+  height: 16px;
+  left: 2px;
+  top: 2px;
+  width: 16px;
+}
+
+.div.chevron-double-right .union {
+  height: 16px;
+  left: 2px;
+  top: 2px;
+  width: 16px;
+}
+
+.div.bolt .union {
+  height: 16px;
+  left: 2px;
+  top: 2px;
+  width: 16px;
+}
+
+.div.flag .union {
+  height: 16px;
+  left: 2px;
+  top: 2px;
+  width: 16px;
+}
+
+.div.bookmark .union {
+  height: 16px;
+  left: 3px;
+  top: 2px;
+  width: 14px;
+}
+
+.div.map .union {
+  height: 16px;
+  left: 2px;
+  top: 2px;
+  width: 16px;
+}
+
+.div.power .union {
+  height: 16px;
+  left: 2px;
+  top: 2px;
+  width: 16px;
+}
+
+.div.scissors .union {
+  height: 16px;
+  left: 2px;
+  top: 2px;
+  width: 16px;
+}
+
+.div.arrow-small-left .union {
+  height: 16px;
+  left: 2px;
+  top: 2px;
+  width: 16px;
+}
+
+.div.currency-rupee .union {
+  height: 16px;
+  left: 2px;
+  top: 2px;
+  width: 16px;
+}
+
+.div.chevron-left .union {
+  height: 16px;
+  left: 2px;
+  top: 2px;
+  width: 16px;
+}
+
+.div.arrows-up-down .union {
+  height: 16px;
+  left: 2px;
+  top: 2px;
+  width: 16px;
+}
+
+.div.view-columns .union {
+  height: 16px;
+  left: 2px;
+  top: 2px;
+  width: 16px;
+}
+
+.div.building-office .union {
+  height: 16px;
+  left: 3px;
+  top: 2px;
+  width: 14px;
+}
+
+.div.bell-snooze .union {
+  height: 16px;
+  left: 2px;
+  top: 2px;
+  width: 16px;
+}
+
+.div.arrow-right .union {
+  height: 16px;
+  left: 2px;
+  top: 2px;
+  width: 16px;
+}
+
+.div.computer-desktop .union {
+  height: 16px;
+  left: 2px;
+  top: 2px;
+  width: 16px;
+}
+
+.div.arrow-long-down .union {
+  height: 16px;
+  left: 2px;
+  top: 2px;
+  width: 16px;
+}
+
+.div.play-circle .union {
+  height: 16px;
+  left: 2px;
+  top: 2px;
+  width: 16px;
+}
+
+.div.cog .union {
+  height: 16px;
+  left: 2px;
+  top: 2px;
+  width: 16px;
+}
+
+.div.pencil .union {
+  height: 16px;
+  left: 2px;
+  top: 2px;
+  width: 16px;
+}
+
+.div.bolt-slash .union {
+  height: 16px;
+  left: 2px;
+  top: 2px;
+  width: 16px;
+}
+
+.div.share .union {
+  height: 16px;
+  left: 2px;
+  top: 2px;
+  width: 16px;
+}
+
+.div.squares-plus .union {
+  height: 16px;
+  left: 2px;
+  top: 2px;
+  width: 16px;
+}
+
+.div.document-text .union {
+  height: 16px;
+  left: 2px;
+  top: 2px;
+  width: 16px;
+}
+
+.div.arrow-up-tray .union {
+  height: 16px;
+  left: 2px;
+  top: 2px;
+  width: 16px;
+}
+
+.div.phone-arrow-up-right .union {
+  height: 16px;
+  left: 2px;
+  top: 2px;
+  width: 16px;
+}
+
+.div.arrow-up-left .union {
+  height: 16px;
+  left: 2px;
+  top: 2px;
+  width: 16px;
+}
+
+.div.finger-print .union {
+  height: 16px;
+  left: 2px;
+  top: 2px;
+  width: 16px;
+}
+
+.div.arrow-down-left .union {
+  height: 16px;
+  left: 2px;
+  top: 2px;
+  width: 16px;
+}
+
+.div.puzzle-piece .union {
+  height: 16px;
+  left: 2px;
+  top: 2px;
+  width: 16px;
+}
+
+.div.paper-clip .union {
+  height: 16px;
+  left: 2px;
+  top: 2px;
+  width: 16px;
+}
+
+.div.building-office-2 .union {
+  height: 16px;
+  left: 2px;
+  top: 2px;
+  width: 16px;
+}
+
+.div.currency-pound .union {
+  height: 16px;
+  left: 2px;
+  top: 2px;
+  width: 16px;
+}
+
+.div.ellipsis-horizontal .union {
+  height: 16px;
+  left: 2px;
+  top: 2px;
+  width: 16px;
+}
+
+.div.arrow-left-on-rectangle .union {
+  height: 16px;
+  left: 2px;
+  top: 2px;
+  width: 16px;
+}
+
+.div.information-circle .union {
+  height: 16px;
+  left: 2px;
+  top: 2px;
+  width: 16px;
+}
+
+.div.arrow-trending-up .union {
+  height: 16px;
+  left: 2px;
+  top: 2px;
+  width: 16px;
+}
+
+.div.arrows-right-left .union {
+  height: 16px;
+  left: 2px;
+  top: 2px;
+  width: 16px;
+}
+
+.div.trophy .union {
+  height: 16px;
+  left: 2px;
+  top: 2px;
+  width: 16px;
+}
+
+.div.chat-bubble-left-ellipsis .union {
+  height: 16px;
+  left: 1px;
+  top: 2px;
+  width: 18px;
+}
+
+.div.rocket-launch .union {
+  height: 16px;
+  left: 2px;
+  top: 2px;
+  width: 16px;
+}
+
+.div.book-open .union {
+  height: 16px;
+  left: 2px;
+  top: 2px;
+  width: 16px;
+}
+
+.div.eye .union {
+  height: 16px;
+  left: 2px;
+  top: 2px;
+  width: 16px;
+}
+
+.div.video-camera .union {
+  height: 16px;
+  left: 2px;
+  top: 2px;
+  width: 16px;
+}
+
+.div.pause-circle .union {
+  height: 16px;
+  left: 2px;
+  top: 2px;
+  width: 16px;
+}
+
+.div.ellipsis-vertical .union {
+  height: 16px;
+  left: 2px;
+  top: 2px;
+  width: 16px;
+}
+
+.div.newspaper .union {
+  height: 16px;
+  left: 2px;
+  top: 2px;
+  width: 16px;
+}
+
+.div.user-plus .union {
+  height: 16px;
+  left: 2px;
+  top: 2px;
+  width: 16px;
+}
+
+.div.wifi .union {
+  height: 16px;
+  left: 2px;
+  top: 2px;
+  width: 16px;
+}
+
+.div.musical-note .union {
+  height: 16px;
+  left: 2px;
+  top: 2px;
+  width: 16px;
+}
+
+.div.funnel .union {
+  height: 16px;
+  left: 2px;
+  top: 2px;
+  width: 16px;
+}
+
+.div.user-minus .union {
+  height: 16px;
+  left: 2px;
+  top: 2px;
+  width: 16px;
+}
+
+.div.check-badge .union {
+  height: 16px;
+  left: 2px;
+  top: 2px;
+  width: 16px;
+}
+
+.div.arrow-up-circle .union {
+  height: 16px;
+  left: 2px;
+  top: 2px;
+  width: 16px;
+}
+
+.div.squares-2x2 .union {
+  height: 16px;
+  left: 2px;
+  top: 2px;
+  width: 16px;
+}
+
+.div.cube-transparent .union {
+  height: 16px;
+  left: 2px;
+  top: 2px;
+  width: 16px;
+}
+
+.div.chevron-double-up .union {
+  height: 16px;
+  left: 2px;
+  top: 2px;
+  width: 16px;
+}
+
+.div.check-circle .union {
+  height: 16px;
+  left: 2px;
+  top: 2px;
+  width: 16px;
+}
+
+.div.envelope-open .union {
+  height: 16px;
+  left: 2px;
+  top: 2px;
+  width: 16px;
+}
+
+.div.arrow-up-on-square .union {
+  height: 16px;
+  left: 2px;
+  top: 2px;
+  width: 16px;
+}
+
+.div.fire .union {
+  height: 16px;
+  left: 2px;
+  top: 2px;
+  width: 16px;
+}
+
+.div.photo .union {
+  height: 16px;
+  left: 2px;
+  top: 2px;
+  width: 16px;
+}
+
+.div.arrow-down-on-square-stack .union {
+  height: 18px;
+  left: 3px;
+  top: 1px;
+  width: 14px;
+}
+
+.div.map-pin .union {
+  height: 17px;
+  left: 3px;
+  top: 2px;
+  width: 14px;
+}
+
+.div.moon .union {
+  height: 16px;
+  left: 2px;
+  top: 2px;
+  width: 16px;
+}
+
+.div.bars-arrow-down .union {
+  height: 16px;
+  left: 2px;
+  top: 2px;
+  width: 16px;
+}
+
+.div.bars-3-bottom-left .union {
+  height: 16px;
+  left: 2px;
+  top: 2px;
+  width: 16px;
+}
+
+.div.clipboard-document .union {
+  height: 16px;
+  left: 2px;
+  top: 2px;
+  width: 16px;
+}
+
+.div.exclamation-triangle .union {
+  height: 16px;
+  left: 2px;
+  top: 2px;
+  width: 16px;
+}
+
+.div.table-cells .union {
+  height: 16px;
+  left: 2px;
+  top: 2px;
+  width: 16px;
+}
+
+.div.arrow-long-right .union {
+  height: 16px;
+  left: 2px;
+  top: 2px;
+  width: 16px;
+}
+
+.div.arrow-small-up .union {
+  height: 16px;
+  left: 2px;
+  top: 2px;
+  width: 16px;
+}
+
+.div.beaker .union {
+  height: 16px;
+  left: 2px;
+  top: 2px;
+  width: 16px;
+}
+
+.div.film .union {
+  height: 16px;
+  left: 2px;
+  top: 2px;
+  width: 16px;
+}
+
+.div.ellipsis-horizontal-circle .union {
+  height: 16px;
+  left: 2px;
+  top: 2px;
+  width: 16px;
+}
+
+.div.home .union {
+  height: 16px;
+  left: 2px;
+  top: 2px;
+  width: 16px;
+}
+
+.div.tag .union {
+  height: 16px;
+  left: 2px;
+  top: 2px;
+  width: 16px;
+}
+
+.div.swatch .union {
+  height: 16px;
+  left: 2px;
+  top: 2px;
+  width: 16px;
+}
+
+.div.folder .union {
+  height: 16px;
+  left: 2px;
+  top: 2px;
+  width: 16px;
+}

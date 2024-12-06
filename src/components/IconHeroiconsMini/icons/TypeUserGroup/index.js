@@ -1,0 +1,1 @@
+export { TypeUserGroup } from "./TypeUserGroup";

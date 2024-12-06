@@ -1,0 +1,1 @@
+export { TypeWifi } from "./TypeWifi";

@@ -1,0 +1,1 @@
+export { TypeMinusCircle } from "./TypeMinusCircle";
