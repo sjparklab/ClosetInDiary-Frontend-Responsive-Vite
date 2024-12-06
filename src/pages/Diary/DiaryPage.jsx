@@ -166,12 +166,12 @@ const DiaryNewest = () => {
         </button>
 
         {showModal && (
-  <div className={styles["modal-overlay"]} onClick={handleCloseModal}>
-      <div onClick={(e) => e.stopPropagation()}>
-          <DiaryUpload />
-      </div>
-  </div>
-)}
+          <div className={styles["modal-overlay"]} onClick={handleCloseModal}>
+            <div onClick={(e) => e.stopPropagation()}>
+              <DiaryUpload />
+            </div>
+          </div>
+        )}
       </div>
 
       <Footer />
