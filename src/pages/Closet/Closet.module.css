@@ -9,6 +9,7 @@
     display: grid;
     grid-template-rows: 130px 1fr fit-content;
     /* 헤더: 80px, 메인: 유동적, 푸터: 60px */
+    min-width: 900px;
     gap: 77px;
     max-width: 1920px;
     min-width: 960px;
@@ -22,19 +23,15 @@
 }
 
 .main {
-    display: grid;
-    grid-template-areas:
-        "sideleft categorySelector sideright"
-        "sideleft content sideright"
-        "sideleft pagecontrol sideright";
-    /* 각 영역 정의 */
-    grid-template-columns: 200px 1fr 200px;
+    display: flex;
+    flex-direction: column;
     /* 열 크기 */
     height: 100%;
     width: 100%;
     justify-content: center;
     align-items: center;
     max-width: 1920px;
+    min-width: 900px;
 }
 
 .categorySelector {
@@ -43,8 +40,14 @@
     flex-direction: column;
     gap: 37px;
     justify-content: left;
+    max-width: 1500px;
+    min-width: 1000px;
 }
-
+.CategorySelectorContainer {
+    display: flex;
+    justify-content: center;
+    flex: 1;
+}
 .categoryTitle {
     color: #111;
     letter-spacing: 0;
@@ -147,7 +150,7 @@
 /* Grid 레이아웃 정의 */
 .grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(25%, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(16%, 1fr));
     width: 100%;
     flex-direction: column;
     align-items: center;

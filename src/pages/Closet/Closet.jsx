@@ -81,28 +81,28 @@ const Closet = () => {
         </div>
         <div className={styles.main}>
           <div className={styles.sideleft} />
-          <div className={styles.categorySelector}>
-            <div className={styles.catTitleUnderline}>
-              <div className={styles.categoryTitle}>MY CLOSET</div>
-            </div>
-            <div className={styles.categorySettigns}>
-              {categories.map((category) => (
-                <div
-                  key={category.name}
-                  className={styles.categorySettingsBox}
-                  onClick={() => handleCategoryClickWithNavigation(category.name)}
-                >
+            <div className={styles.categorySelector}>
+              <div className={styles.catTitleUnderline}>
+                <div className={styles.categoryTitle}>MY CLOSET</div>
+              </div>
+              <div className={styles.categorySettigns}>
+                {categories.map((category) => (
                   <div
-                    className={classNames(styles.categoryList, {
-                      [styles.selected]: selectedCategory === category.name,
-                    })}
+                    key={category.name}
+                    className={styles.categorySettingsBox}
+                    onClick={() => handleCategoryClickWithNavigation(category.name)}
                   >
-                    <img src={category.image} alt={category.name} />
+                    <div
+                      className={classNames(styles.categoryList, {
+                        [styles.selected]: selectedCategory === category.name,
+                      })}
+                    >
+                      <img src={category.image} alt={category.name} />
+                    </div>
+                    <p>{category.name}</p>
                   </div>
-                  <p>{category.name}</p>
-                </div>
-              ))}
-            </div>
+                ))}
+              </div>
           </div>
           <div className={styles.side2} />
           <div className={styles.side3} />
