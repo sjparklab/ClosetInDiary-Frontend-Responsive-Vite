@@ -1,4 +1,4 @@
-import React, { useState, useEffect }from 'react';
+import React, { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import LoginHeader from './components/LoginHeader';
 import Login from './pages/Login';
@@ -25,7 +25,7 @@ function App() {
         try {
           // 토큰 디코딩
           const decodedToken = jwtDecode(accessToken);
-  
+
           // 현재 시간과 만료 시간 비교
           const currentTime = Date.now() / 1000; // 현재 시간 (초 단위)
           if (decodedToken.exp > currentTime) {
@@ -40,9 +40,13 @@ function App() {
         }
       }
     };
-  
+
     verifyToken();
   }, []);
+
+  useEffect(() => {
+    console.log('Login state changed:', isLoggedIn);
+  }, [isLoggedIn]);
 
   const handleLogin = () => {
     setIsLoggedIn(true);
@@ -58,21 +62,19 @@ function App() {
   return (
     <Router>
       <AuthProvider>
-        <Routes>
+        <Routes key={isLoggedIn ? 'loggedIn' : 'loggedOut'}>
           <Route path="/*" element={<Login />} />
-          {/* 테스트용 라우터 */}
-          {/* 페이지 구축 라우터 */}
           <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<SignUp />} />
 
-          <Route path="/closet" element={isLoggedIn ? <Closet /> : <Navigate to="/login" replace />}/>
-          <Route path="/closet/add-new" element={isLoggedIn ? <ClosetAddPage /> :  <Navigate to="/login" replace />} />
-          <Route path="/closet/edit/:id" element={isLoggedIn ? <ClosetEditPage /> :  <Navigate to="/login" replace />} />
-          <Route path="/profile" element={isLoggedIn ? <MyProfile /> :  <Navigate to="/login" replace />} />
-          <Route path="/diary" element={isLoggedIn ? <Diary /> :  <Navigate to="/login" replace />} />
-          <Route path="/diaryupload" element={isLoggedIn ? <DiaryUpload /> : <Navigate to="/login" replace />}/>
-          <Route path="/diary/edit/:id" element={isLoggedIn ? <DiaryEdit /> : <Navigate to="/login" replace />}/>
-          <Route path="/friends" element={isLoggedIn ? <Friends /> : <Navigate to="/login" replace />}/>
+          <Route path="/closet" element={isLoggedIn ? <Closet /> : <Navigate to="/login" replace />} />
+          <Route path="/closet/add-new" element={isLoggedIn ? <ClosetAddPage /> : <Navigate to="/login" replace />} />
+          <Route path="/closet/edit/:id" element={isLoggedIn ? <ClosetEditPage /> : <Navigate to="/login" replace />} />
+          <Route path="/profile" element={isLoggedIn ? <MyProfile /> : <Navigate to="/login" replace />} />
+          <Route path="/diary" element={isLoggedIn ? <Diary /> : <Navigate to="/login" replace />} />
+          <Route path="/diaryupload" element={isLoggedIn ? <DiaryUpload /> : <Navigate to="/login" replace />} />
+          <Route path="/diary/edit/:id" element={isLoggedIn ? <DiaryEdit /> : <Navigate to="/login" replace />} />
+          <Route path="/friends" element={isLoggedIn ? <Friends /> : <Navigate to="/login" replace />} />
         </Routes>
       </AuthProvider>
     </Router>

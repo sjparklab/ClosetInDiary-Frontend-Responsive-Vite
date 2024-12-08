@@ -17,8 +17,14 @@ const Login = () => {
 
     const handleLogin = async (e) => {
         e.preventDefault();
-        await login(email, password);
-    };
+        const result = await login(email, password);
+        if (result.success) {
+          setIsLoggedIn(true);
+          navigate('/closet'); // 로그인 성공 시 리다이렉트
+        } else {
+          alert('로그인 실패');
+        }
+      };
 
     return (
         <div className={styles.container}>
