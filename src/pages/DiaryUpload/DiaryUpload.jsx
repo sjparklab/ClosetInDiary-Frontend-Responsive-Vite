@@ -1,9 +1,9 @@
-import React, { useState, useRef } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import styles from './DiaryUpload.module.css';
 import arrow24 from '../../assets/images/arrow-24.png';
 import axios from '../../services/apiClient';
 
-const DiaryUpload = () => {
+const DiaryUpload = ({closeModal}) => {
     const [dropdownOpen, setDropdownOpen] = useState(false);
     const [mainImageFile, setMainImageFile] = useState(null);
     const [mainImagePreview, setMainImagePreview] = useState(null);
@@ -59,44 +59,55 @@ const DiaryUpload = () => {
         }
     };
 
-    const handleUpload = async () => {
-        try {
-            setDate(new Date().toISOString().substring(0, 10));
-            const formData = new FormData();
-
-            // data 부분(JSON)
-            const diaryData = {
-                title: title,
-                content: content,
-                date: date, // 사용자 입력 혹은 현재 날짜 사용
-            };
-            formData.append("data", new Blob([JSON.stringify(diaryData)], { type: "application/json" }));
-
-            // 메인 이미지 파일 추가
-            if (mainImageFile) {
-                formData.append("mainImage", mainImageFile);
-            }
-
-            // 서브 이미지 파일들 추가
-            if (subImageFiles && subImageFiles.length > 0) {
-                subImageFiles.forEach(file => formData.append("subImages", file));
-            }
-
-            // 서버로 전송 (API 엔드포인트, 인증토큰 등 필요할 수 있음)
-            const response = await axios.post("/diaries", formData, {
-                headers: {
-                    'Content-Type': 'multipart/form-data'
-                }
-            });
-
-            console.log("업로드 성공:", response.data);
-            alert("업로드 성공!");
-
-        } catch (error) {
-            console.error("업로드 실패:", error);
-            alert("업로드 실패");
-        }
+    const handleUpload = () => {
+        setDate(new Date().toISOString().substring(0, 10));
     };
+
+    useEffect(() => {
+        const uploadData = async () => {
+            if (!date) return;
+
+            try {
+                const formData = new FormData();
+
+                // data 부분(JSON)
+                const diaryData = {
+                    title: title,
+                    content: content,
+                    date: date, // 사용자 입력 혹은 현재 날짜 사용
+                };
+                formData.append("data", new Blob([JSON.stringify(diaryData)], { type: "application/json" }));
+
+                // 메인 이미지 파일 추가
+                if (mainImageFile) {
+                    formData.append("mainImage", mainImageFile);
+                }
+
+                // 서브 이미지 파일들 추가
+                if (subImageFiles && subImageFiles.length > 0) {
+                    subImageFiles.forEach(file => formData.append("subImages", file));
+                }
+
+                // 서버로 전송 (API 엔드포인트, 인증토큰 등 필요할 수 있음)
+                const response = await axios.post("/diaries", formData, {
+                    headers: {
+                        'Content-Type': 'multipart/form-data'
+                    }
+                });
+
+                console.log("업로드 성공:", response.data);
+                alert("업로드 성공!");
+                closeModal(); // 업로드 성공 시 모달 닫기
+
+            } catch (error) {
+                console.error("업로드 실패:", error);
+                alert("업로드 실패");
+            }
+        };
+
+        uploadData();
+    }, [date]);
+
 
     return (
         <div className={styles.DiaryUploadContainer}>

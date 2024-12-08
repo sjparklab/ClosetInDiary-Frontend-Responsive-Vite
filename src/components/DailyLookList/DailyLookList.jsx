@@ -10,6 +10,7 @@ export const DailyLookList = ({
   text1 = "첫 일기. 꼬박꼬박 잘 써야지 !",
   divClassName,
   blobImage,
+  onClick,
 }) => {
   const [blobUrl, setBlobUrl] = useState(null);
 
@@ -25,7 +26,7 @@ export const DailyLookList = ({
   }, [blobImage]);
 
   return (
-    <div className={`daily-look-list ${className}`}>
+    <div className={`daily-look-list ${className}`} onClick={onClick}>
       <div className="dailylook-box">
         {blobUrl ? (
           <img src={blobUrl} alt="Daily Look" className="dailylook-image" />
@@ -34,7 +35,7 @@ export const DailyLookList = ({
         )}
       </div>
 
-      <div className="ellipse" />
+      {/* <div className="ellipse" /> */}
 
       <div className={`frame ${frameClassName}`}>
         <div className="element">{text}</div>
@@ -48,4 +49,5 @@ DailyLookList.propTypes = {
   text: PropTypes.string,
   text1: PropTypes.string,
   blobImage: PropTypes.instanceOf(Blob),
+  onClick: PropTypes.func.isRequired,
 };

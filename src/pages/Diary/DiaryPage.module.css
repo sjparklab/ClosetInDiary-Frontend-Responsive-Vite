@@ -1,4 +1,13 @@
+/* DiaryPage.module.css */
+.mainContainer {
+  display: flex;
+  flex-direction: column;
+  min-height: fit-content;
+}
+
+
 .diary-newest {
+  flex: 1;
   align-items: center;
   background-color: #ffffff;
   display: flex;
@@ -6,16 +15,16 @@
   gap: 58px;
   min-height: 50vh;
   height: 100%;
-  justify-content: center;
   position: relative;
   margin-top: 70px;
   margin-bottom: 100px;
 }
 
 .group {
-  height: 752px;
   position: relative;
   width: 1512px;
+  display:flex;
+  flex-direction: column;
 }
 
 .div-wrapper {
@@ -27,7 +36,6 @@
   gap: 10px;
   left: 22px;
   padding: 15px 0px;
-  position: absolute;
   top: 0;
   width: 352px;
 }
@@ -46,19 +54,19 @@
 }
 
 .group-2 {
-  height: 597px;
-  left: 0;
-  position: absolute;
-  top: 155px;
   width: 1512px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .group-3 {
   height: 12px;
-  left: 1341px;
-  position: absolute;
-  top: 0;
   width: 171px;
+  display: flex;
+  position: absolute;
+  left: 90%;
+  top: -5%;
 }
 
 .frame-2 {
@@ -72,7 +80,6 @@
   justify-content: center;
   left: 0;
   padding: 10px 15px;
-  position: absolute;
   top: 0;
 }
 
@@ -98,7 +105,6 @@
   justify-content: center;
   left: 77px;
   padding: 10px 15px;
-  position: absolute;
   top: 0;
 }
 
@@ -117,17 +123,15 @@
 }
 
 .group-4 {
-  height: 559px;
-  left: 0;
-  position: absolute;
-  top: 38px;
+  display: flex;
+  flex-wrap: wrap;
   width: 1500px;
+  gap: 20px;
+  margin-top: 100px;
+  position: relative;
 }
 
 .daily-look-list-instance {
-  left: 1140px !important;
-  position: absolute !important;
-  top: 0 !important;
 }
 
 .design-component-instance-node {

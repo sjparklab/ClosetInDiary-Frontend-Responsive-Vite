@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { useNavigate } from 'react-router-dom';
 import { DailyLookList } from "../../components/DailyLookList";
 import { PaginationControl } from "../../components/PaginationControl";
 import { PaginationPage } from "../../components/PaginationPage";
@@ -8,11 +9,13 @@ import Footer from "../../components/Footer";
 import apiClient from "../../services/apiClient"; // 위에서 주신 apiClient 코드가 있는 경로
 import plusbutton from "./plusbutton.svg"
 import DiaryUpload from "../../pages/DiaryUpload";
+import DiaryEdit from "../../pages/DiaryEdit";
 
 const DiaryNewest = () => {
   const [diaries, setDiaries] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
   const itemsPerPage = 16; // 최대 16개
+  const navigate = useNavigate();
 
   useEffect(() => {
     async function loadDiaries() {
@@ -23,8 +26,8 @@ const DiaryNewest = () => {
         const diariesWithBlobs = [];
         for (const diary of data) {
           let blobImage = null;
-          if (diary.imagePath) {
-            const imageResponse = await apiClient.get(diary.imagePath, { responseType: 'blob' });
+          if (diary.mainImagePath) {
+            const imageResponse = await apiClient.get(`/diaries/image/${diary.mainImagePath}`, { responseType: 'blob' });
             blobImage = imageResponse.data;
           }
           diariesWithBlobs.push({
@@ -62,6 +65,7 @@ const DiaryNewest = () => {
   };
 
   const [showModal, setShowModal] = useState(false);
+  const [selectedDiaryId, setSelectedDiaryId] = useState(null);
 
   const handleOpenModal = () => {
     setShowModal(true);
@@ -69,10 +73,16 @@ const DiaryNewest = () => {
 
   const handleCloseModal = () => {
     setShowModal(false);
+    setSelectedDiaryId(null);
+  };
+
+  const handleItemClick = (id) => {
+    setSelectedDiaryId(id);
+    setShowModal(true);
   };
 
   return (
-    <>
+    <div className={styles.mainContainer}>
       <Header />
       <div className={styles["diary-newest"]}>
         <div className={styles.group}>
@@ -81,23 +91,16 @@ const DiaryNewest = () => {
           </div>
 
           <div className={styles["group-2"]}>
-            <div className={styles["group-3"]}>
-              <div className={styles["frame-2"]}>
-                <div className={styles["text-wrapper-3"]}>최신순</div>
-              </div>
-              <div className={styles["frame-3"]}>
-                <div className={styles["text-wrapper-4"]}>기간 지정</div>
-              </div>
-            </div>
-
             <div className={styles["group-4"]}>
               {currentItems.length > 0 ? (
                 currentItems.map((item, index) => (
                   <DailyLookList
                     key={index}
                     className={styles["daily-look-list-instance"]}
-                    text={item.text}
-                    text1={item.text1}
+                    blobImage={item.blobImage}
+                    text={item.date}
+                    text1={item.title}
+                    onClick={() => handleItemClick(item.id)} // 클릭 핸들러 추가
                   // 필요하다면 frameClassName, divClassName도 적용 가능
                   />
                 ))
@@ -106,6 +109,14 @@ const DiaryNewest = () => {
                   당신의 이야기로 채워질 공간입니다. 오늘 하루는 어땠나요?
                 </div>
               )}
+              <div className={styles["group-3"]}>
+                <div className={styles["frame-2"]}>
+                  <div className={styles["text-wrapper-3"]}>최신순</div>
+                </div>
+                <div className={styles["frame-3"]}>
+                  <div className={styles["text-wrapper-4"]}>기간 지정</div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -168,14 +179,18 @@ const DiaryNewest = () => {
         {showModal && (
           <div className={styles["modal-overlay"]} onClick={handleCloseModal}>
             <div onClick={(e) => e.stopPropagation()}>
-              <DiaryUpload />
+              {selectedDiaryId ? (
+                <DiaryEdit id={selectedDiaryId} closeModal={handleCloseModal} />
+              ) : (
+                <DiaryUpload closeModal={handleCloseModal} />
+              )}
             </div>
           </div>
         )}
       </div>
 
       <Footer />
-    </>
+    </div>
   );
 };
 

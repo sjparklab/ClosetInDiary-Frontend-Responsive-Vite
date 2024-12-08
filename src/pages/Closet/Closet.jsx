@@ -1,8 +1,8 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import styles from './Closet.module.css';
 import Header from '../../components/NormalHeader';
-import Footer from '../../components/Footer'
+import Footer from '../../components/Footer';
 import classNames from 'classnames';
 import addNewCategoryImage from '../../assets/images/addNewCategory.png';
 import allCategoryImage from '../../assets/images/allCategory.png';
@@ -15,6 +15,7 @@ import shoesCategoryImage from '../../assets/images/shoesCategory.png';
 import bagsCategoryImage from '../../assets/images/bagsCategory.png';
 import accessoriesCategoryImage from '../../assets/images/accessoriesCategory.png';
 import { useCategorySelection } from '../../hooks/useCategorySelection';
+import apiClient from '../../services/apiClient';
 
 const categories = [
   { name: 'Add New', image: addNewCategoryImage },
@@ -30,8 +31,9 @@ const categories = [
 ];
 
 const Closet = () => {
-  const { selectedCategory, handleCategoryClick, images } = useCategorySelection();
-  const navigate = useNavigate(); // useNavigate 훅 사용
+  const { selectedCategory, handleCategoryClick, imageIds } = useCategorySelection();
+  const [images, setImages] = useState([]);
+  const navigate = useNavigate();
 
   const handleCategoryClickWithNavigation = (categoryName) => {
     if (categoryName === 'Add New') {
@@ -40,6 +42,31 @@ const Closet = () => {
       handleCategoryClick(categoryName); // 다른 카테고리의 기존 동작 처리
     }
   };
+
+  const handleImageClick = (id) => {
+    navigate(`/closet/edit/${id}`);
+  };
+
+  useEffect(() => {
+    const fetchImages = async () => {
+      try {
+        const imageRequests = imageIds.map((id) =>
+          apiClient.get(`/closet/image/${id}`, { responseType: 'blob' })
+        );
+
+        const imageResponses = await Promise.all(imageRequests);
+        const imageUrls = imageResponses.map((response) => URL.createObjectURL(response.data));
+        setImages(imageUrls);
+      } catch (error) {
+        console.error('Error fetching images:', error);
+        alert('Failed to load images. Please try again.');
+      }
+    };
+
+    if (imageIds.length > 0) {
+      fetchImages();
+    }
+  }, [imageIds]);
 
   return (
     <div className={styles.maxSizingContainer}>
@@ -78,7 +105,7 @@ const Closet = () => {
             <div className={images.length > 0 ? styles.grid : styles.emptyGrid}>
               {images.length > 0 ? (
                 images.map((url, index) => (
-                  <div key={index} className={styles.gridItem}>
+                  <div key={index} className={styles.gridItem} onClick={() => handleImageClick(imageIds[index])}>
                     <img src={url} alt={`Image ${index}`} className={styles.gridImage} />
                   </div>
                 ))
@@ -89,7 +116,6 @@ const Closet = () => {
           </div>
           <div className={styles.side4} />
           <div className={styles.side5} />
-          {/* <div className={styles.pageSelector}>1234</div> */}
           <div className={styles.sideright} />
         </div>
         <Footer />
