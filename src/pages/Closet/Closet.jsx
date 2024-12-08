@@ -49,7 +49,7 @@ const Closet = () => {
 
   useEffect(() => {
     // 컴포넌트가 마운트되면 기본 카테고리를 "All"로 설정
-    setSelectedCategory('All');
+    handleCategoryClickWithNavigation('All');
   }, [setSelectedCategory]);
 
   useEffect(() => {
