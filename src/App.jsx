@@ -14,7 +14,7 @@ import Diary from './pages/Diary';
 import { jwtDecode } from 'jwt-decode';
 import ClosetEditPage from './pages/ClosetEditPage';
 import DiaryEdit from './pages/DiaryEdit';
-
+import Friends from './pages/Friends';
 function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(!!localStorage.getItem('accessToken'));
 
@@ -59,11 +59,8 @@ function App() {
     <Router>
       <AuthProvider>
         <Routes>
+          <Route path="/*" element={<Login />} />
           {/* 테스트용 라우터 */}
-          <Route path="/test/login-header" element={<LoginHeader />} />
-          <Route path="/test/normal-header" element={<NormalHeader />} />
-          <Route path="/test/footer" element={<Footer />} />
-
           {/* 페이지 구축 라우터 */}
           <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<SignUp />} />
@@ -75,6 +72,7 @@ function App() {
           <Route path="/diary" element={isLoggedIn ? <Diary /> :  <Navigate to="/login" replace />} />
           <Route path="/diaryupload" element={isLoggedIn ? <DiaryUpload /> : <Navigate to="/login" replace />}/>
           <Route path="/diary/edit/:id" element={isLoggedIn ? <DiaryEdit /> : <Navigate to="/login" replace />}/>
+          <Route path="/friends" element={isLoggedIn ? <Friends /> : <Navigate to="/login" replace />}/>
         </Routes>
       </AuthProvider>
     </Router>

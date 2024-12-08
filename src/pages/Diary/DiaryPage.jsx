@@ -74,6 +74,7 @@ const DiaryNewest = () => {
   const handleCloseModal = () => {
     setShowModal(false);
     setSelectedDiaryId(null);
+    window.location.reload(); // 페이지 새로고침
   };
 
   const handleItemClick = (id) => {

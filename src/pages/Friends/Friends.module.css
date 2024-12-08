@@ -1,0 +1,287 @@
+.friendsRequestsContainer {
+    display: flex;
+    justify-content: center;
+}
+
+.friendsRequests {
+    align-items: center;
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    gap: 67px;
+    position: relative;
+    min-width: 1000px;
+    margin-top: 75px;
+    margin-bottom: 75px;
+    max-width: 1786px;
+    width: 100%;
+    justify-content: center;
+}
+
+.frame2 {
+    align-items: center;
+    align-self: stretch;
+    display: flex;
+    flex: 0 0 auto;
+    flex-direction: column;
+    gap: 70px;
+    justify-content: center;
+    padding: 0px 100px;
+    position: relative;
+    width: 100%;
+}
+
+.frame3 {
+    align-items: center;
+    align-self: stretch;
+    display: flex;
+    flex: 0 0 auto;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    width: 100%;
+}
+
+.frameWrapper {
+    align-items: center;
+    align-self: stretch;
+    display: flex;
+    gap: 10px;
+    height: 100px;
+    padding: 10px;
+    position: relative;
+    width: 100%;
+}
+
+.frame4 {
+    align-items: center;
+    display: flex;
+    flex: 1;
+    flex-grow: 1;
+    gap: 10px;
+    height: 80px;
+    padding: 15px 125px;
+    position: relative;
+}
+
+.frame5 {
+    align-items: center;
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    position: relative;
+    width: 313px;
+}
+
+.frame6 {
+    align-items: center;
+    border-bottom-style: solid;
+    border-bottom-width: 4px;
+    border-color: #111111;
+    display: flex;
+    flex: 1;
+    flex-grow: 1;
+    gap: 10px;
+    height: 50px;
+    padding: 15px 0px;
+    position: relative;
+}
+
+.frame7 {
+    align-items: center;
+    display: inline-flex;
+    flex: 0 0 auto;
+    gap: 80px;
+    justify-content: center;
+    margin-bottom: -7.50px;
+    margin-top: -7.50px;
+    position: relative;
+}
+
+.textWrapper5 {
+    color: #111111;
+    font-family: "Pretendard", Helvetica;
+    font-size: 32px;
+    font-weight: 600;
+    letter-spacing: 0;
+    line-height: 35px;
+    margin-top: -1.00px;
+    position: relative;
+    white-space: nowrap;
+    width: fit-content;
+}
+
+.designComponentInstanceNode {
+    box-shadow: unset !important;
+    flex: 0 0 auto !important;
+    gap: 100px !important;
+}
+
+.editDeleteButton2 {
+    color: #222222b2 !important;
+}
+
+.frame8 {
+    align-items: center;
+    align-self: stretch;
+    display: flex;
+    gap: 10px;
+    height: 50px;
+    justify-content: flex-end;
+    padding: 19px 125px;
+    position: relative;
+    width: 100%;
+}
+
+.frame9 {
+    align-items: center;
+    display: inline-flex;
+    flex: 0 0 auto;
+    gap: 5px;
+    justify-content: center;
+    position: relative;
+}
+
+.frame10 {
+    align-items: center;
+    border-color: #ebebeb;
+    border-right-style: solid;
+    border-right-width: 1px;
+    display: flex;
+    gap: 10px;
+    height: 12px;
+    justify-content: center;
+    padding: 10px 15px;
+    position: relative;
+    width: 84px;
+}
+
+.textWrapper6 {
+    color: #4e4e4e;
+    font-family: "Pretendard", Helvetica;
+    font-size: 13px;
+    font-weight: 400;
+    letter-spacing: 0;
+    line-height: 18px;
+    margin-bottom: -12.00px;
+    margin-top: -14.00px;
+    position: relative;
+    white-space: nowrap;
+    width: fit-content;
+}
+
+.frame11 {
+    align-items: center;
+    display: flex;
+    gap: 10px;
+    height: 12px;
+    justify-content: center;
+    padding: 10px 15px;
+    position: relative;
+    width: 68px;
+}
+
+.textWrapper7 {
+    color: #4e4e4e;
+    font-family: "Pretendard", Helvetica;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0;
+    line-height: 18px;
+    margin-bottom: -12.00px;
+    margin-top: -14.00px;
+    position: relative;
+    white-space: nowrap;
+    width: fit-content;
+}
+
+.frame12 {
+    align-items: center;
+    align-self: stretch;
+    display: flex;
+    flex: 0 0 auto;
+    flex-wrap: wrap;
+    gap: 45px 50px;
+    justify-content: center;
+    position: relative;
+    width: 100%;
+}
+
+.frame96 {
+    position: relative !important;
+}
+
+.frame13 {
+    align-items: center;
+    align-self: stretch;
+    display: flex;
+    flex: 0 0 auto;
+    flex-direction: column;
+    gap: 103px;
+    justify-content: center;
+    position: relative;
+    width: 100%;
+    padding: 0px 100px;
+}
+
+.frame14 {
+    align-items: center;
+    align-self: stretch;
+    display: flex;
+    gap: 10px;
+    height: 80px;
+    padding: 15px 125px;
+    position: relative;
+    width: 100%;
+}
+
+.frame15 {
+    align-items: center;
+    border-bottom-style: solid;
+    border-bottom-width: 4px;
+    border-color: #111111;
+    display: inline-flex;
+    flex: 0 0 auto;
+    gap: 10px;
+    height: 50px;
+    padding: 15px 0px;
+    position: relative;
+}
+
+.textWrapper8 {
+    color: #111111;
+    font-family: "Pretendard", Helvetica;
+    font-size: 32px;
+    font-weight: 600;
+    letter-spacing: 0;
+    line-height: 35px;
+    margin-bottom: -3.50px;
+    margin-top: -11.50px;
+    position: relative;
+    width: 313px;
+}
+
+.frame16 {
+    align-items: center;
+    align-self: stretch;
+    display: flex;
+    flex: 0 0 auto;
+    flex-wrap: wrap;
+    gap: 50px 50px;
+    justify-content: center;
+    padding: 0px 100px;
+    position: relative;
+    width: 100%;
+}
+
+.noRequestsMessage,
+.noFriendsMessage {
+    color: #111111;
+    font-family: "Pretendard", Helvetica;
+    font-size: 20px;
+    font-weight: 400;
+    letter-spacing: 0;
+    line-height: 24px;
+    white-space: nowrap;
+    width: fit-content;
+}
