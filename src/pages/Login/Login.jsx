@@ -3,7 +3,7 @@ import styles from './Login.module.css';
 import Header from '../../components/LoginHeader';
 import uncheckedIcon from "../../assets/images/check-box.svg";
 import checkedIcon from "../../assets/images/checked-box.svg";
-import { Link } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 import { useAuth } from '../../context/AuthContext';
 
 const Login = () => {
@@ -11,7 +11,7 @@ const Login = () => {
     const handleCheckboxClick = () => {
         setIsChecked(!isChecked);
     };
-
+    const navigate = useNavigate();
     const { login } = useAuth();
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
@@ -66,9 +66,9 @@ const Login = () => {
                     </div>
                     <div className={styles.notiBox}>
                         <div className={styles.forgetYourPassword}>Forget your password</div>
-                        <div className={styles.signUpMessage}>Don't have an account?&nbsp;<Link to="/signup" className={styles.signUpLink}>
+                        <div className={styles.signUpMessage}>Don't have an account?&nbsp;<Link to="/signup" className={styles.signUpLink}/>
                             Sign up
-                        </Link></div>
+                            </div>
                     </div>
                 </form>
             </div>

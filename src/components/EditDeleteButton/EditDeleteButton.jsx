@@ -12,10 +12,11 @@ export const EditDeleteButton = ({
   className,
   divClassName,
   text = "수정",
+  onClick,
 }) => {
   return (
     <div className={`${styles.editDeleteButton} ${className}`}>
-      <div className={`${styles.div} ${divClassName}`}>
+      <div className={`${styles.div} ${divClassName}`} onClick={onClick}>
         {button === "edit" && <>{text}</>}
 
         {button === "button-2" && <>삭제</>}
