@@ -11,7 +11,6 @@ const Login = () => {
     const handleCheckboxClick = () => {
         setIsChecked(!isChecked);
     };
-    const navigate = useNavigate();
     const { login } = useAuth();
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
@@ -66,8 +65,8 @@ const Login = () => {
                     </div>
                     <div className={styles.notiBox}>
                         <div className={styles.forgetYourPassword}>Forget your password</div>
-                        <div className={styles.signUpMessage}>Don't have an account?&nbsp;<Link to="/signup" className={styles.signUpLink}/>
-                            Sign up
+                        <div className={styles.signUpMessage}>Don't have an account?&nbsp;<Link to="/signup" className={styles.signUpLink}>
+                            Sign up</Link>
                             </div>
                     </div>
                 </form>
