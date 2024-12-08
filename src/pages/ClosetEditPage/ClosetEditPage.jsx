@@ -165,14 +165,14 @@ const ClosetAddClothes = () => {
                           <option value="" disabled>
                             카테고리를 선택해주세요
                           </option>
-                          <option value="TOPS">상의</option>
-                          <option value="DRESSES">드레스</option>
-                          <option value="PANTS">바지</option>
-                          <option value="SKIRTS">치마</option>
-                          <option value="OUTERWEAR">아우터</option>
-                          <option value="SHOES">신발</option>
-                          <option value="BAGS">가방</option>
-                          <option value="ACCESSORIES">액세서리</option>
+                          <option value="TOPS">TOPS</option>
+                          <option value="DRESSES">DRESSES</option>
+                          <option value="PANTS">PANTS</option>
+                          <option value="SKIRTS">SKIRTS</option>
+                          <option value="OUTERWEAR">OUTERWEAR</option>
+                          <option value="SHOES">SHOES</option>
+                          <option value="BAGS">BAGS</option>
+                          <option value="ACCESSORIES">ACCESSORIES</option>
                         </select>
                       </div>
                     </div>
