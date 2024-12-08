@@ -1,9 +1,28 @@
 import React, { useState, useEffect, useRef } from 'react';
+import PropTypes from "prop-types";
+
 import axios from '../../services/apiClient';
 import styles from './DiaryEdit.module.css';
 import arrow24 from '../../assets/images/arrow-24.png';
 
+export const EditDeleteButton = ({ button, className, onClick }) => {
+  return (
+    <div className={`edit-delete-button ${className}`} onClick={onClick}>
+      <div className={styles}>
+        {button === "edit" && <>수정</>}
+        {button === "button-2" && <>삭제</>}
+      </div>
+    </div>
+  );
+};
+
+EditDeleteButton.propTypes = {
+  button: PropTypes.oneOf(["button-2", "edit"]),
+  onClick: PropTypes.func,
+};
+
 const DiaryEdit = ({ id, closeModal }) => {
+  const [isEditMode, setIsEditMode] = useState(false);
   const [title, setTitle] = useState('');
   const [content, setContent] = useState('');
   const [date, setDate] = useState('');
@@ -14,6 +33,10 @@ const DiaryEdit = ({ id, closeModal }) => {
   const [dropdownOpen, setDropdownOpen] = useState(false);
   const [currentMode, setCurrentMode] = useState(null); // 'daily' or 'clothes'
   const fileInputRef = useRef(null);
+
+  const handleEditClick = () => {
+    setIsEditMode(true);
+  };
 
   useEffect(() => {
     const fetchDiaryData = async () => {
@@ -132,6 +155,18 @@ const DiaryEdit = ({ id, closeModal }) => {
     }
   };
 
+  const handleDeleteClick = async () => {
+    try {
+      const response = await axios.delete(`/diaries/${id}`);
+      console.log("삭제 버튼 클릭됨", response.data);
+      alert("삭제가 성공적으로 완료되었습니다.");
+      closeModal(); // 모달 창 닫기
+    } catch (error) {
+      console.error("Error deleting diary:", error);
+      alert("삭제에 실패했습니다. 다시 시도해 주세요.");
+    }
+  };
+
   return (
     <div className={styles.DiaryUploadContainer}>
       <div className={styles.MainContainer}>
@@ -174,8 +209,18 @@ const DiaryEdit = ({ id, closeModal }) => {
                 </div>
               )}
             </div>
-            <div className={styles.UpBt}>
-              <button className={styles.UpBt2} onClick={handleUpload}>업로드</button>
+            <div className={styles.container}>
+              {!isEditMode && (
+                <div className={styles.editDelete}>
+                  <EditDeleteButton button="edit" className={styles.editDeleteButton} onClick={handleEditClick} />
+                  <EditDeleteButton button="button-2" className={styles.editDeleteButton} onClick={handleDeleteClick} />
+                </div>
+              )}
+              {isEditMode && (
+                <div className={styles.UpBt}>
+                  <button className={styles.UpBt2} onClick={handleUpload}>업로드</button>
+                </div>
+              )}
             </div>
           </div>
         </div>

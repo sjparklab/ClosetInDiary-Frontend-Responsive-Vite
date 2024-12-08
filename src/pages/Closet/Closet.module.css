@@ -9,7 +9,6 @@
     display: grid;
     grid-template-rows: 130px 1fr fit-content;
     /* 헤더: 80px, 메인: 유동적, 푸터: 60px */
-    min-width: 900px;
     gap: 77px;
     max-width: 1920px;
     min-width: 960px;
