@@ -21,6 +21,7 @@ export function useCategorySelection() {
 
   return {
     selectedCategory,
+    setSelectedCategory,
     handleCategoryClick,
     imageIds,
   };

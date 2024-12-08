@@ -31,7 +31,7 @@ const categories = [
 ];
 
 const Closet = () => {
-  const { selectedCategory, handleCategoryClick, imageIds } = useCategorySelection();
+  const { selectedCategory, setSelectedCategory, handleCategoryClick, imageIds } = useCategorySelection();
   const [images, setImages] = useState([]);
   const navigate = useNavigate();
 
@@ -46,6 +46,11 @@ const Closet = () => {
   const handleImageClick = (id) => {
     navigate(`/closet/edit/${id}`);
   };
+
+  useEffect(() => {
+    // 컴포넌트가 마운트되면 기본 카테고리를 "All"로 설정
+    setSelectedCategory('All');
+  }, [setSelectedCategory]);
 
   useEffect(() => {
     const fetchImages = async () => {
