@@ -17,14 +17,8 @@ const Login = () => {
 
     const handleLogin = async (e) => {
         e.preventDefault();
-        const result = await login(email, password);
-        if (result.success) {
-          setIsLoggedIn(true);
-          navigate('/closet'); // 로그인 성공 시 리다이렉트
-        } else {
-          alert('로그인 실패');
-        }
-      };
+        await login(email, password);
+    };
 
     return (
         <div className={styles.container}>
@@ -73,7 +67,7 @@ const Login = () => {
                         <div className={styles.forgetYourPassword}>Forget your password</div>
                         <div className={styles.signUpMessage}>Don't have an account?&nbsp;<Link to="/signup" className={styles.signUpLink}>
                             Sign up</Link>
-                            </div>
+                        </div>
                     </div>
                 </form>
             </div>
