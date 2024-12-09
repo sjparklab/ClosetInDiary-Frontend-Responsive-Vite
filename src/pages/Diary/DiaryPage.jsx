@@ -1,8 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate } from 'react-router-dom';
 import { DailyLookList } from "../../components/DailyLookList";
-import { PaginationControl } from "../../components/PaginationControl";
-import { PaginationPage } from "../../components/PaginationPage";
 import styles from "./DiaryPage.module.css";
 import Header from "../../components/NormalHeader";
 import Footer from "../../components/Footer";
@@ -13,8 +11,6 @@ import DiaryEdit from "../../pages/DiaryEdit";
 
 const DiaryNewest = () => {
   const [diaries, setDiaries] = useState([]);
-  const [currentPage, setCurrentPage] = useState(1);
-  const itemsPerPage = 16; // 최대 16개
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -44,25 +40,6 @@ const DiaryNewest = () => {
 
     loadDiaries();
   }, []);
-
-  const totalPages = Math.ceil(diaries.length / itemsPerPage);
-  const currentItems = diaries.slice((currentPage - 1) * itemsPerPage, currentPage * itemsPerPage);
-
-  const handlePageChange = (page) => {
-    setCurrentPage(page);
-  };
-
-  const handlePrevPage = () => {
-    if (currentPage > 1) {
-      setCurrentPage(currentPage - 1);
-    }
-  };
-
-  const handleNextPage = () => {
-    if (currentPage < totalPages) {
-      setCurrentPage(currentPage + 1);
-    }
-  };
 
   const [showModal, setShowModal] = useState(false);
   const [selectedDiaryId, setSelectedDiaryId] = useState(null);
@@ -94,8 +71,8 @@ const DiaryNewest = () => {
 
             <div className={styles["group-2"]}>
               <div className={styles["group-4"]}>
-                {currentItems.length > 0 ? (
-                  currentItems.map((item, index) => (
+                {diaries.length > 0 ? (
+                  diaries.map((item, index) => (
                     <DailyLookList
                       key={index}
                       className={styles["daily-look-list-instance"]}
@@ -123,56 +100,6 @@ const DiaryNewest = () => {
             </div>
           </div>
         </div>
-        {totalPages > 1 && (
-          <div className={styles["group-6"]}>
-            <div className={styles["frame-wrapper"]}>
-              <div className={styles["frame-4"]}>
-                {/* 이전 페이지 버튼 */}
-                <PaginationControl
-                  className={styles["pagination-control-instance"]}
-                  divClassName={styles["pagination-control-2"]}
-                  size="lg"
-                  state="default"
-                  type="back"
-                  text={true}
-                  onClick={handlePrevPage}
-                />
-
-                {/* 페이지 번호 버튼들 */}
-                {Array.from({ length: totalPages }, (_, i) => i + 1).map((pageNum) => (
-                  <PaginationPage
-                    key={pageNum}
-                    className={
-                      pageNum === currentPage
-                        ? styles["pagination-page-3"] // 현재 페이지 스타일
-                        : styles["pagination-page-instance"]
-                    }
-                    divClassName={
-                      pageNum === currentPage
-                        ? styles["pagination-page-4"]
-                        : styles["pagination-page-5"]
-                    }
-                    page={String(pageNum)}
-                    size="lg"
-                    stateProp={pageNum === currentPage ? "active" : "default"}
-                    onClick={() => handlePageChange(pageNum)}
-                  />
-                ))}
-
-                {/* 다음 페이지 버튼 */}
-                <PaginationControl
-                  className={styles["pagination-control-4"]}
-                  divClassNameOverride={styles["pagination-control-3"]}
-                  size="lg"
-                  state="default"
-                  type="next"
-                  text={true}
-                  onClick={handleNextPage}
-                />
-              </div>
-            </div>
-          </div>
-        )}
         {/* 추가 버튼 */}
         <button className={styles["add-button"]} onClick={handleOpenModal}>
           <img src={plusbutton} alt="" />

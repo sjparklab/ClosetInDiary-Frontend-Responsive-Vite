@@ -170,7 +170,7 @@ const ClosetAddClothes = () => {
               <div className={styles.frame5}>
                 <div className={styles.frame6}>
                   <p className={styles.textWrapper2}>
-                    이 옷을 사게 된 계기는 무엇인가요?
+                    인연이 피어난 순간
                   </p>
 
                   <div className={styles.frame7}>
