@@ -186,7 +186,7 @@ const ClosetAddClothes = () => {
                 </div>
 
                 <div className={styles.frame8}>
-                  <div className={styles.textWrapper2}>어떤 옷인가요?</div>
+                  <div className={styles.textWrapper2}>옷 정보</div>
 
                   <div className={styles.frame9}>
                     <div className={styles.frame10}>
