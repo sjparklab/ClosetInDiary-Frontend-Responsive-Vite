@@ -4,7 +4,6 @@
   display: flex;
   flex-direction: column;
   gap: 10px;
-  height: 900px;
   justify-content: space-around;
   min-width: 900px;
   position: relative;
@@ -208,7 +207,8 @@
 }
 
 .textWrapper5 {
-  background: transparent; /* 배경 투명 */
+  background: transparent;
+  /* 배경 투명 */
   border: none;
   color: black;
   font-family: "Pretendard", Helvetica;
@@ -335,4 +335,104 @@
   position: relative;
   white-space: nowrap;
   width: fit-content;
+}
+
+.diaryFrame {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  gap: 70px;
+  padding: 50px 100px;
+  min-width: 1200px;
+}
+
+.diaryFrame .diaryOverlap {
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 4px 4px 4px 4px #0000000d;
+  flex: 1;
+  aspect-ratio: 2 / 3;
+  padding: calc(72 / 161 * 5%) calc(45 / 161 * 5%) calc(161 / 161 * 5%); /* 상단, 좌우, 하단 비율에 따라 패딩 설정 */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: fit-content;
+  min-width: 250px;
+  max-width: 400px;
+}
+
+.diaryFrame .diaryImage {
+  object-fit: cover;
+  aspect-ratio: 4.5 / 6;
+  width: 100%;
+  height: auto;
+}
+
+.diaryFrame .diaryOverlapGroup {
+  flex: 2;
+}
+
+.diaryFrame .diaryFrameWrapper {
+  align-items: center;
+  display: inline-flex;
+  gap: 10px;
+  padding: 10px;
+}
+
+.diaryFrame .diaryDivWrapper {
+
+}
+
+.diaryFrame .diaryDiv {
+  display: flex;
+  flex-direction: column;
+  gap: 35px;
+}
+
+.diaryFrame .diaryTextWrapper2 {
+  color: #000000;
+  font-family: "Pretendard", Helvetica;
+  font-size: 40px;
+  font-weight: 600;
+  letter-spacing: 0;
+  line-height: 30px;
+}
+
+.diaryFrame .diaryTextWrapper3 {
+  color: #222222;
+  font-family: "Pretendard", Helvetica;
+  font-size: 34px;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 18px;
+}
+
+.diaryFrame .diaryElementWrapper {
+}
+
+.diaryFrame .diaryElement {
+  color: #222222;
+  font-family: "Pretendard", Helvetica;
+  font-size: 20px;
+  font-weight: 400;
+  left: 0;
+  letter-spacing: 0;
+  line-height: 29px;
+  top: -1px;
+}
+
+.diaryFrame .diaryAddButtonInstance {
+  box-shadow: 0px 20px 40px #0000001a !important;
+  left: 874px !important;
+  top: 0 !important;
+}
+
+.diaryContainer {
+  max-width: 1500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 50px;
+  margin-bottom: 50px;
 }

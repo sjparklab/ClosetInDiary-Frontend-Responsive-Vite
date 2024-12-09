@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import PropTypes from "prop-types";
-
+import ClothesSelectionModal from '../ClothesSelectionModal/';
 import axios from '../../services/apiClient';
 import styles from './DiaryEdit.module.css';
 import arrow24 from '../../assets/images/arrow-24.png';
@@ -33,6 +33,34 @@ const DiaryEdit = ({ id, closeModal }) => {
   const [dropdownOpen, setDropdownOpen] = useState(false);
   const [currentMode, setCurrentMode] = useState(null); // 'daily' or 'clothes'
   const fileInputRef = useRef(null);
+  const [isClothesModalOpen, setIsClothesModalOpen] = useState(false);
+  const [selectedClothes, setSelectedClothes] = useState([]);
+
+  const handleClothesClick = () => {
+    setCurrentMode('clothes');
+    setIsClothesModalOpen(true);
+  };
+
+  const handleClothesModalClose = () => {
+    setIsClothesModalOpen(false);
+  };
+
+  const handleClothesSelection = async (selected) => {
+    setSelectedClothes(selected);
+    console.log('Selected clothes:', selected);
+
+    try {
+      const subImageUrls = await Promise.all(
+        selected.map(async (clothes) => {
+          const response = await axios.get(`/closet/image/${clothes.id}`, { responseType: 'blob' });
+          return URL.createObjectURL(response.data);
+        })
+      );
+      setSubImagePreviews(subImageUrls);
+    } catch (error) {
+      console.error('Failed to fetch clothes images:', error);
+    }
+  };
 
   const handleEditClick = () => {
     setIsEditMode(true);
@@ -57,8 +85,8 @@ const DiaryEdit = ({ id, closeModal }) => {
 
         // 서브 이미지 URL 요청
         const subImageBlobs = await Promise.all(
-          data.subImagePaths.map(async (key) => {
-            const response = await axios.get(`/diaries/image/${key}`, { responseType: 'blob' });
+          data.outfits.map(async (key) => {
+            const response = await axios.get(`/closet/image/${key.id}`, { responseType: 'blob' });
             return response.data;
           })
         );
@@ -81,11 +109,6 @@ const DiaryEdit = ({ id, closeModal }) => {
   const handleDailyLookClick = () => {
     setCurrentMode('daily');
     openFileDialog(false);
-  };
-
-  const handleClothesClick = () => {
-    setCurrentMode('clothes');
-    openFileDialog(true);
   };
 
   const openFileDialog = (multiple) => {
@@ -125,17 +148,13 @@ const DiaryEdit = ({ id, closeModal }) => {
         title: title,
         content: content,
         date: date, // 사용자 입력 혹은 현재 날짜 사용
+        outfitIds: selectedClothes.map(clothes => clothes.id), // Add selected clothes IDs
       };
       await formData.append("data", new Blob([JSON.stringify(diaryData)], { type: "application/json" }));
 
       // 메인 이미지 파일 추가
       if (mainImageFile) {
         await formData.append("mainImage", mainImageFile);
-      }
-
-      // 서브 이미지 파일들 추가
-      if (subImageFiles && subImageFiles.length > 0) {
-        await subImageFiles.forEach(file => formData.append("subImages", file));
       }
 
       // 서버로 전송 (API 엔드포인트, 인증토큰 등 필요할 수 있음)
@@ -193,22 +212,29 @@ const DiaryEdit = ({ id, closeModal }) => {
           </div>
 
           <div className={styles.UploadButtons}>
-            <div className={styles.FileSelectButton}>
-              <button onClick={handleDropdownToggle}>
-                <p>파일 선택하기</p>
-                <img src={arrow24} alt="arrow" />
-              </button>
-              {dropdownOpen && (
-                <div className={styles.DropdownMenu}>
-                  <button className={styles.DropdownItem} onClick={handleDailyLookClick}>
-                    데일리룩 등록
-                  </button>
-                  <button className={styles.DropdownItem} onClick={handleClothesClick}>
-                    옷 등록
-                  </button>
-                </div>
-              )}
-            </div>
+            {isEditMode && (
+              <div className={styles.FileSelectButton}>
+                <button onClick={handleDropdownToggle}>
+                  <p>파일 선택하기</p>
+                  <img src={arrow24} alt="arrow" />
+                </button>
+                {dropdownOpen && (
+                  <div className={styles.DropdownMenu}>
+                    <button className={styles.DropdownItem} onClick={handleDailyLookClick}>
+                      데일리룩 등록
+                    </button>
+                    <button onClick={handleClothesClick}>옷 등록</button>
+
+                    {/* 새 모달 추가 */}
+                    <ClothesSelectionModal
+                      isOpen={isClothesModalOpen}
+                      onClose={handleClothesModalClose}
+                      onSelect={handleClothesSelection}
+                    />
+                  </div>
+                )}
+              </div>
+            )}
             <div className={styles.container}>
               {!isEditMode && (
                 <div className={styles.editDelete}>

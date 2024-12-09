@@ -13,6 +13,10 @@ const ClosetAddClothes = () => {
   const [selectedOption, setSelectedOption] = useState(""); // 선택된 값 관리
   const [uploadedImage, setUploadedImage] = useState(frame53); // 미리보기용 이미지 URL
   const [fileToUpload, setFileToUpload] = useState(null); // 서버로 전송할 File 객체
+  const [diaries, setDiaries] = useState([]);
+  const [diariesImage, setDiariesImage] = useState([]);
+
+
   const navigate = useNavigate();
 
   const [inputs, setInputs] = useState({
@@ -48,6 +52,38 @@ const ClosetAddClothes = () => {
     if (id) {
       fetchClothesData();
     }
+  }, [id]);
+
+  useEffect(() => {
+    // 옷과 연결된 일기 데이터를 가져오기
+    const fetchDiaries = async () => {
+      try {
+        const response = await apiClient.get(`/closet/${id}/diaries`);
+        const diariesData = response.data;
+
+        // 각 일기의 이미지 URL을 별도로 요청
+        const diariesWithImages = await Promise.all(
+          diariesData.map(async (diary) => {
+            try {
+              const imageResponse = await apiClient.get(`/diaries/image/${diary.mainImagePath}`, { responseType: 'blob' });
+              const imageBlob = imageResponse.data;
+              const imageUrl = URL.createObjectURL(imageBlob);
+              return { ...diary, imageUrl };
+            } catch (error) {
+              console.error(`Failed to fetch image for diary ${diary.id}:`, error);
+              return diary; // 이미지 요청 실패 시 원래 객체 반환
+            }
+          })
+        );
+
+        setDiaries(diariesData);
+        setDiariesImage(diariesWithImages);
+      } catch (error) {
+        console.error('Failed to fetch diaries:', error);
+      }
+    };
+
+    fetchDiaries();
   }, [id]);
 
   const handleChange = (event) => {
@@ -232,6 +268,32 @@ const ClosetAddClothes = () => {
               </div>
             </div>
           </div>
+        </div>
+        <div className={styles.diaryContainer}>
+          {diariesImage.map((diary) => (
+            <div key={diary.id} className={styles.diaryFrame}>
+              <div className={styles.diaryOverlap}>
+                <img className={styles.diaryImage} alt="Image" src={diary.imageUrl} />
+              </div>
+              <div className={styles.diaryOverlapGroup}>
+                <div className={styles.diaryFrameWrapper}>
+                  <div className={styles.diaryDivWrapper}>
+                    <div className={styles.diaryDiv}>
+                      <div className={styles.diaryTextWrapper2}>{new Date(diary.date).toLocaleDateString('ko-KR', {
+                        year: 'numeric',
+                        month: 'long',
+                        day: 'numeric'
+                      })}</div>
+                      <div className={styles.diaryTextWrapper3}>{diary.title}</div>
+                      <div className={styles.diaryElementWrapper}>
+                        <p className={styles.diaryElement}>{diary.content}</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          ))}
         </div>
       </div>
       <Footer />

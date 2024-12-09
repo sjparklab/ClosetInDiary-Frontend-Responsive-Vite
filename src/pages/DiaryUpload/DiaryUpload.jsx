@@ -2,6 +2,7 @@ import React, { useState, useRef, useEffect } from 'react';
 import styles from './DiaryUpload.module.css';
 import arrow24 from '../../assets/images/arrow-24.png';
 import axios from '../../services/apiClient';
+import ClothesSelectionModal from '../ClothesSelectionModal/';
 
 const DiaryUpload = ({closeModal}) => {
     const [dropdownOpen, setDropdownOpen] = useState(false);
@@ -19,6 +20,9 @@ const DiaryUpload = ({closeModal}) => {
     const [date, setDate] = useState(""); 
     // date는 사용자가 선택하거나 입력하도록 할 수도 있음. 여기서는 단순히 빈 문자열로 시작.
 
+    const [isClothesModalOpen, setIsClothesModalOpen] = useState(false);
+    const [selectedClothes, setSelectedClothes] = useState([]);
+
     const handleDropdownToggle = () => {
         setDropdownOpen(!dropdownOpen);
     };
@@ -30,7 +34,28 @@ const DiaryUpload = ({closeModal}) => {
 
     const handleClothesClick = () => {
         setCurrentMode('clothes');
-        openFileDialog(true);
+        setIsClothesModalOpen(true);
+    };
+
+    const handleClothesModalClose = () => {
+        setIsClothesModalOpen(false);
+    };
+
+    const handleClothesSelection = async (selected) => {
+        setSelectedClothes(selected);
+        console.log('Selected clothes:', selected);
+
+        try {
+            const subImageUrls = await Promise.all(
+                selected.map(async (clothes) => {
+                    const response = await axios.get(`/closet/image/${clothes.id}`, { responseType: 'blob' });
+                    return URL.createObjectURL(response.data);
+                })
+            );
+            setSubImagePreviews(subImageUrls);
+        } catch (error) {
+            console.error('Failed to fetch clothes images:', error);
+        }
     };
 
     const openFileDialog = (multiple) => {
@@ -75,17 +100,13 @@ const DiaryUpload = ({closeModal}) => {
                     title: title,
                     content: content,
                     date: date, // 사용자 입력 혹은 현재 날짜 사용
+                    outfitIds: selectedClothes.map(clothes => clothes.id), // Add selected clothes IDs
                 };
                 formData.append("data", new Blob([JSON.stringify(diaryData)], { type: "application/json" }));
 
                 // 메인 이미지 파일 추가
                 if (mainImageFile) {
                     formData.append("mainImage", mainImageFile);
-                }
-
-                // 서브 이미지 파일들 추가
-                if (subImageFiles && subImageFiles.length > 0) {
-                    subImageFiles.forEach(file => formData.append("subImages", file));
                 }
 
                 // 서버로 전송 (API 엔드포인트, 인증토큰 등 필요할 수 있음)
@@ -148,6 +169,11 @@ const DiaryUpload = ({closeModal}) => {
                                     <button className={styles.DropdownItem} onClick={handleClothesClick}>
                                         옷 등록
                                     </button>
+                                    <ClothesSelectionModal
+                                        isOpen={isClothesModalOpen}
+                                        onClose={handleClothesModalClose}
+                                        onSelect={handleClothesSelection}
+                                    />
                                 </div>
                             )}
                         </div>
