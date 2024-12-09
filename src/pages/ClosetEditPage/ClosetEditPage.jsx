@@ -15,7 +15,7 @@ const ClosetAddClothes = () => {
   const [fileToUpload, setFileToUpload] = useState(null); // 서버로 전송할 File 객체
   const [diaries, setDiaries] = useState([]);
   const [diariesImage, setDiariesImage] = useState([]);
-
+  const [isEditMode, setIsEditMode] = useState(false);
 
   const navigate = useNavigate();
 

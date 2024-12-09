@@ -136,9 +136,9 @@ const FriendsRequests = () => {
                       <div className={styles.modal}>
                         <div className={styles.modalContent}>
                           <div className={styles.searchOptionContainer}>
-                            <h2>친구 추가</h2>
+                            <h2 className={styles.friendAddTitle}>친구 추가</h2>
                             <div className={styles.searchContainer}>
-                              <label htmlFor="searchType">검색 기준:</label>
+                              <label htmlFor="searchType">검색 기준 : </label>
                               <select
                                 id="searchType"
                                 value={searchType}

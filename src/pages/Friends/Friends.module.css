@@ -327,7 +327,7 @@
     cursor: pointer;
     border: none;
     border-radius: 4px;
-    background-color: #007bff;
+    background-color: #222222;
     color: white;
 
   }
@@ -337,7 +337,7 @@
   }
   
   .modalButtons button:hover {
-    background-color: #0056b3;
+    background-color: #222222;
   }
 
   .searchOptionContainer {
@@ -345,4 +345,17 @@
     flex-direction: column;
     justify-content: center;
     gap: 20px;
+  }
+  .friendAddTitle {
+    font-size: 20px;
+    font-weight: 500;
+    font-family: "Pretendard", Helvetica;
+  }
+  
+  #searchType {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-family: "Pretendard", Helvetica;
   }
