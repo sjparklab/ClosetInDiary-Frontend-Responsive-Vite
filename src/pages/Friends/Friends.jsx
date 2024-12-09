@@ -71,10 +71,10 @@ const FriendsRequests = () => {
       alert("값을 입력하세요.");
       return;
     }
-  
+
     let url = "/friend-requests/send";
     const formData = new FormData();
-  
+
     switch (searchType.toLowerCase()) {
       case "email":
         url = "/friend-requests/send/by-email";
@@ -92,7 +92,7 @@ const FriendsRequests = () => {
         alert("유효한 검색 유형을 선택하세요.");
         return;
     }
-  
+
     try {
       const response = await apiClient.post(url, formData, {
         headers: {
@@ -106,7 +106,7 @@ const FriendsRequests = () => {
       alert("친구 요청을 보내는 중 오류가 발생했습니다.");
     }
   };
-  
+
   return (
     <>
       <Header />
@@ -128,6 +128,41 @@ const FriendsRequests = () => {
                         />
                       </div>
                     </div>
+                  </div>
+                  <div>
+                    <button onClick={openModal} className={styles.friendsModalOpen}>친구추가</button>
+
+                    {isModalOpen && (
+                      <div className={styles.modal}>
+                        <div className={styles.modalContent}>
+                          <div className={styles.searchOptionContainer}>
+                            <h2>친구 추가</h2>
+                            <div className={styles.searchContainer}>
+                              <label htmlFor="searchType">검색 기준:</label>
+                              <select
+                                id="searchType"
+                                value={searchType}
+                                onChange={(e) => setSearchType(e.target.value)}
+                              >
+                                <option value="ID">ID</option>
+                                <option value="username">Username</option>
+                                <option value="email">Email</option>
+                              </select>
+                            </div>
+                            <input
+                              type="text"
+                              placeholder={`Enter ${searchType}`}
+                              value={searchValue}
+                              onChange={(e) => setSearchValue(e.target.value)}
+                            />
+                          </div>
+                          <div className={styles.modalButtons}>
+                            <button onClick={addFriend}>친구 요청 보내기</button>
+                            <button onClick={closeModal}>취소</button>
+                          </div>
+                        </div>
+                      </div>
+                    )}
                   </div>
                 </div>
               </div>
@@ -197,37 +232,6 @@ const FriendsRequests = () => {
                     {index + 1}
                   </button>
                 ))}
-              </div>
-            )}
-          </div>
-          <div>
-            <button onClick={openModal}>친구추가</button>
-
-            {isModalOpen && (
-              <div className={styles.modal}>
-                <div className={styles.modalContent}>
-                  <h2>친구 추가</h2>
-                  <label htmlFor="searchType">검색 기준:</label>
-                  <select
-                    id="searchType"
-                    value={searchType}
-                    onChange={(e) => setSearchType(e.target.value)}
-                  >
-                    <option value="ID">ID</option>
-                    <option value="username">Username</option>
-                    <option value="email">Email</option>
-                  </select>
-                  <input
-                    type="text"
-                    placeholder={`Enter ${searchType}`}
-                    value={searchValue}
-                    onChange={(e) => setSearchValue(e.target.value)}
-                  />
-                  <div className={styles.modalButtons}>
-                    <button onClick={addFriend}>친구 요청 보내기</button>
-                    <button onClick={closeModal}>취소</button>
-                  </div>
-                </div>
               </div>
             )}
           </div>
