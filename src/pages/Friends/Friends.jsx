@@ -11,6 +11,8 @@ const FriendsRequests = () => {
   const [currentPage, setCurrentPage] = useState(1);
   const [currentRequestPage, setCurrentRequestPage] = useState(1);
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [searchType, setSearchType] = useState("ID");
+  const [searchValue, setSearchValue] = useState("");
   const [users, setUsers] = useState([]);
   const friendsPerPage = 16;
   const requestsPerPage = 16;
@@ -57,31 +59,54 @@ const FriendsRequests = () => {
   const paginateFriends = (pageNumber) => setCurrentPage(pageNumber);
   const paginateRequests = (pageNumber) => setCurrentRequestPage(pageNumber);
 
-  const openModal = async () => {
-    setIsModalOpen(true);
-    try {
-      const response = await apiClient.get('/friends-all-users'); // 서버에서 사용자 정보 가져오기
-      setUsers(response.data);
-    } catch (error) {
-      console.error('Error fetching users:', error);
-    }
+  const openModal = () => setIsModalOpen(true);
+  const closeModal = () => {
+    setIsModalOpen(false);
+    setSearchType("ID");
+    setSearchValue("");
   };
 
-  const addFriend = async (userId) => {
-    let formData = new FormData();
-    formData.append('receiverId', userId);
+  const addFriend = async () => {
+    if (!searchValue.trim()) {
+      alert("값을 입력하세요.");
+      return;
+    }
+  
+    let url = "/friend-requests/send";
+    const formData = new FormData();
+  
+    switch (searchType.toLowerCase()) {
+      case "email":
+        url = "/friend-requests/send/by-email";
+        formData.append("email", searchValue.trim());
+        break;
+      case "username":
+        url = "/friend-requests/send/by-username";
+        formData.append("username", searchValue.trim());
+        break;
+      case "id":
+        url = "/friend-requests/send/by-id";
+        formData.append("id", searchValue.trim());
+        break;
+      default:
+        alert("유효한 검색 유형을 선택하세요.");
+        return;
+    }
+  
     try {
-      const response = await apiClient.post('/friend-requests/send', formData, {
+      const response = await apiClient.post(url, formData, {
         headers: {
-          'Content-Type': 'multipart/form-data',
+          "Content-Type": "multipart/form-data",
         },
       });
-      console.log(`Friend request sent to user with ID: ${userId}`, response.data);
+      alert(`친구 요청이 성공적으로 전송되었습니다.`);
+      closeModal();
     } catch (error) {
-      console.error('Error sending friend request:', error);
+      console.error("Error sending friend request:", error);
+      alert("친구 요청을 보내는 중 오류가 발생했습니다.");
     }
   };
-
+  
   return (
     <>
       <Header />
@@ -179,32 +204,29 @@ const FriendsRequests = () => {
             <button onClick={openModal}>친구추가</button>
 
             {isModalOpen && (
-              <div className="modal">
-                <div className="modal-content">
-                  <span className="close" onClick={() => setIsModalOpen(false)}>&times;</span>
-                  <h2>사용자 목록</h2>
-                  <table>
-                    <thead>
-                      <tr>
-                        <th>사용자 고유번호</th>
-                        <th>사용자 ID</th>
-                        <th>이름</th>
-                        <th>프로필사진</th>
-                        <th>친구 추가</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      {users.map(user => (
-                        <tr key={user.id}>
-                          <td>{user.id}</td>
-                          <td>{user.username}</td>
-                          <td>{user.name}</td>
-                          <td><img src={user.profilePicture} alt={`${user.name}'s profile`} width="50" /></td>
-                          <td><button onClick={() => addFriend(user.id)}>친구 추가</button></td>
-                        </tr>
-                      ))}
-                    </tbody>
-                  </table>
+              <div className={styles.modal}>
+                <div className={styles.modalContent}>
+                  <h2>친구 추가</h2>
+                  <label htmlFor="searchType">검색 기준:</label>
+                  <select
+                    id="searchType"
+                    value={searchType}
+                    onChange={(e) => setSearchType(e.target.value)}
+                  >
+                    <option value="ID">ID</option>
+                    <option value="username">Username</option>
+                    <option value="email">Email</option>
+                  </select>
+                  <input
+                    type="text"
+                    placeholder={`Enter ${searchType}`}
+                    value={searchValue}
+                    onChange={(e) => setSearchValue(e.target.value)}
+                  />
+                  <div className={styles.modalButtons}>
+                    <button onClick={addFriend}>친구 요청 보내기</button>
+                    <button onClick={closeModal}>취소</button>
+                  </div>
                 </div>
               </div>
             )}

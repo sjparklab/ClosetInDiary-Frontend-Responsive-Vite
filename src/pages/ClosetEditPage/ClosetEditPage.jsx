@@ -148,7 +148,7 @@ const ClosetAddClothes = () => {
         <div className={styles.frame2}>
           <div className={styles.frameWrapper}>
             <div className={styles.divWrapper}>
-              <p className={styles.p}>이 옷이 담아낼 당신의 이야기는 어떤 모습일까요?</p>
+              <p className={styles.p}>이 옷이 품은 당신의 이야기</p>
             </div>
           </div>
 

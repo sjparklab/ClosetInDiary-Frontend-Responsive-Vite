@@ -73,7 +73,7 @@ const DiaryEdit = ({ id, closeModal }) => {
         const data = response.data;
         setTitle(data.title);
         setContent(data.content);
-        setDate(data.date);
+        setDate(new Date(data.date));
 
         // 메인 이미지 URL 요청
         const mainImageResponse = await axios.get(`/diaries/image/${data.mainImagePath}`, { responseType: 'blob' });
@@ -186,12 +186,18 @@ const DiaryEdit = ({ id, closeModal }) => {
     }
   };
 
+  const formattedDate = date instanceof Date ? date.toLocaleDateString('ko-KR', {
+    year: 'numeric',
+    month: 'long',
+    day: 'numeric'
+  }) : '';
+
   return (
     <div className={styles.DiaryUploadContainer}>
       <div className={styles.MainContainer}>
         <div className={styles.LeftBox}>
           <div className={styles.UploadTitle}>
-            오늘의 이야기
+            {formattedDate}
           </div>
 
           <div className={styles.UploadInput}>
