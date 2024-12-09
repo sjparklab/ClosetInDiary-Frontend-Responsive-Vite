@@ -206,6 +206,7 @@ const DiaryEdit = ({ id, closeModal }) => {
                 placeholder="제목을 입력해 주세요."
                 value={title}
                 onChange={(e) => setTitle(e.target.value)}
+                disabled={!isEditMode} // Disable input when not in edit mode
               />
             </div>
             <div className={styles.Inputcontent}>
@@ -213,6 +214,7 @@ const DiaryEdit = ({ id, closeModal }) => {
                 placeholder="오늘의 이야기를 자유롭게 펼쳐 보세요!"
                 value={content}
                 onChange={(e) => setContent(e.target.value)}
+                disabled={!isEditMode} // Disable textarea when not in edit mode
               />
             </div>
           </div>
