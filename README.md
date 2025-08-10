@@ -28,3 +28,12 @@ assets/styles/ # reset, global, variables
   - 401 응답 시 **refresh-token** 재발급
 - `src/services/authService.js`
   - `/api/signup`, `/api/login` 등 인증 관련 호출
+
+## 스크린샷
+<img width="1197" height="622" alt="image" src="https://github.com/user-attachments/assets/3a354aae-07fb-4768-8a6b-007fb9452f11" />
+<img width="1156" height="639" alt="image" src="https://github.com/user-attachments/assets/dcdae806-dde1-4004-b3b8-daef4dce2ce2" />
+<img width="1186" height="633" alt="image" src="https://github.com/user-attachments/assets/f23ab8e3-62e9-4885-a98c-b0da8e3aa508" />
+<img width="1187" height="625" alt="image" src="https://github.com/user-attachments/assets/824286fd-dca1-4f6b-9000-a7eeb37f09c8" />
+<img width="1258" height="596" alt="image" src="https://github.com/user-attachments/assets/36e8c453-6e62-4305-86c6-5a5b2218819a" />
+<img width="1201" height="639" alt="image" src="https://github.com/user-attachments/assets/6d54f5e4-da57-4dbd-9aea-f07df08c6019" />
+<img width="615" height="575" alt="image" src="https://github.com/user-attachments/assets/26b46f50-1f06-48c8-9981-25bf873aac88" />
