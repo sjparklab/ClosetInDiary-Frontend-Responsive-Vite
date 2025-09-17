@@ -331,6 +331,7 @@
   text-align: center;
   border: none;
   cursor: pointer;
+  z-index: 3000; 
   /* 추가적인 스타일 (호버 효과 등) 가능 */
 }
 
